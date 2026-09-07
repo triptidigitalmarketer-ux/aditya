@@ -1,0 +1,92 @@
+{
+  "project_name": "Aditya Gaur, Advocate - Premium Legal Practice Website",
+  "art_direction": {
+    "concept": "Awwwards-Level Boutique Legal Identity",
+    "vibe": "Elegantly minimal, authoritative, deeply trustworthy, sophisticated Indian legal advocate practice with bespoke typography and generous architectural whitespace.",
+    "theme": "Light theme dominant (70% Warm Ivory #F8F6F1 & Pure White #FFFFFF, 25% Deep Navy #0B1F33 & Secondary Navy #163A59, 5% Muted Gold #B89B5E).",
+    "anti_patterns": [
+      "NO cheap templates or aggressive advertising popups",
+      "NO excessive gold or shiny gradients",
+      "NO generic scales of justice or wooden gavels placed everywhere",
+      "NO fake awards, fake star ratings, or guaranteed-result legal claims",
+      "NO dark mode default for public legal marketing pages",
+      "NO Inter for main or section headings (use Cormorant Garamond / Playfair Display)"
+    ]
+  },
+  "color_palette": {
+    "primary_deep_navy": "#0B1F33",
+    "secondary_navy": "#163A59",
+    "muted_gold": "#B89B5E",
+    "muted_gold_hover": "#A28549",
+    "warm_ivory": "#F8F6F1",
+    "charcoal_body": "#222222",
+    "pure_white": "#FFFFFF",
+    "slate_border": "#E2E8F0",
+    "subtle_card_bg": "#FCFBF8",
+    "distribution_ratio": "70% Warm Ivory/White base, 25% Navy structural contrast, 5% Muted Gold accent"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond, Playfair Display, serif",
+    "body_font": "Inter, Source Sans 3, sans-serif",
+    "accent_mono_font": "JetBrains Mono, monospace (for court case numbers, chamber metadata, tags)",
+    "scale": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-serif font-normal leading-[1.1] tracking-tight",
+      "h2_section": "text-2xl sm:text-3xl lg:text-4xl font-serif font-normal leading-snug tracking-tight",
+      "h3_card": "text-xl sm:text-2xl font-serif font-medium leading-snug",
+      "body_large": "text-lg sm:text-xl font-sans font-light leading-relaxed text-charcoal",
+      "body_regular": "text-base font-sans font-normal leading-relaxed text-charcoal/90",
+      "caption_overline": "text-xs font-mono uppercase tracking-[0.2em] text-muted_gold font-semibold"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_philosophy": "Generous luxury spacing (2x to 3x standard). Use py-20 lg:py-32 for main sections and p-8 lg:p-12 for primary card containers.",
+    "container_max_width": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "header_spec": "Fixed top bar with glassmorphism backdrop-blur-md bg-[#F8F6F1]/90 border-b border-[#0B1F33]/10 z-50 h-20",
+    "grid_modes": {
+      "practice_areas_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8",
+      "bento_manifesto": "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12",
+      "jurisdiction_strip": "flex flex-wrap items-center justify-between gap-4 py-6 border-y border-[#B89B5E]/30"
+    }
+  },
+  "motion_specification": {
+    "library": "framer-motion + lenis smooth scrolling",
+    "hero_reveal": "Signature line-by-line masked text slide-up with subtle staggered gold accent line grow",
+    "scroll_behavior": "Lenis momentum scroll for buttery editorial weight",
+    "editorial_marquee": "Slow drifting text strip (gap-24, text-xs mono, uppercase, tracking-[0.3em], muted gold/navy palette)",
+    "hover_micro_interactions": {
+      "card_lift": "hover:-translate-y-1 hover:shadow-xl transition-all duration-300 ease-out border-l-2 border-transparent hover:border-[#B89B5E]",
+      "cta_button": "transition-transform duration-200 active:scale-95 hover:bg-[#163A59] hover:text-white"
+    }
+  },
+  "component_styling": {
+    "primary_button": "px-7 py-3.5 bg-[#0B1F33] text-[#F8F6F1] font-sans font-medium text-sm tracking-wider uppercase rounded-none hover:bg-[#163A59] transition-all duration-300 shadow-md border border-[#0B1F33] data-[testid]",
+    "secondary_button": "px-7 py-3.5 bg-transparent text-[#0B1F33] font-sans font-medium text-sm tracking-wider uppercase rounded-none hover:bg-[#0B1F33] hover:text-[#F8F6F1] transition-all duration-300 border border-[#0B1F33] data-[testid]",
+    "gold_accent_button": "px-7 py-3.5 bg-[#B89B5E] text-[#0B1F33] font-sans font-semibold text-sm tracking-wider uppercase rounded-none hover:bg-[#A28549] hover:text-white transition-all duration-300 shadow-sm data-[testid]",
+    "card": "bg-[#FCFBF8] border border-[#0B1F33]/10 p-8 shadow-sm hover:shadow-md transition-all duration-300",
+    "accordion": "border-b border-[#0B1F33]/10 py-5 text-left font-serif text-lg text-[#0B1F33]",
+    "breadcrumbs": "text-xs font-mono tracking-wider text-charcoal/60 uppercase flex items-center gap-2"
+  },
+  "image_urls": {
+    "portrait_placeholder": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBsYXd5ZXIlMjBzdWl0JTIwb2ZmaWNlJTIwcG9ydHJhaXQlMjBjb25zdWx0YXRpb258ZW58MHx8fHwxNzg4Nzk5MzgzfDA&ixlib=rb-4.1.0&q=85",
+    "court_library_bg": "https://images.pexels.com/photos/6077091/pexels-photo-6077091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "office_interior": "https://images.unsplash.com/photo-1571055931484-22dce9d6c510?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBsYXclMjBvZmZpY2UlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyYWwlMjBkZXNpZ258ZW58MHx8fHwxNzg4Nzk5MzgzfDA&ixlib=rb-4.1.0&q=85",
+    "courthouse_architecture": "https://images.unsplash.com/photo-1729346878607-0dfc1295ee5a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBsYXclMjBvZmZpY2UlMjBpbnRlcmlvciUyMGFyY2hpdGVjdHVyYWwlMjBkZXNpZ258ZW58MHx8fHwxNzg4Nzk5MzgzfDA&ixlib=rb-4.1.0&q=85"
+  },
+  "page_structures": {
+    "homepage": "Hero (Masked Heading + Portrait + Trust Strip) -> Chamber & Identity Intro -> Practice Areas Bento -> High Court & Supreme Court Practice Strip -> Local Jurisdictions (Faridabad, Delhi, Noida, Gurugram) -> Case Process / Client Approach -> Legal Insights Preview -> Contact & Chamber Address -> Footer",
+    "practice_area_detail": "Breadcrumb -> H1 Practice Title & Key Takeaways -> Practice Scope & Statutory Provisions -> Common Scenarios -> Case Approach & Procedure -> FAQ Accordion -> Consultation CTA Form -> Related Practice Areas",
+    "location_seo_page": "Breadcrumb -> H1 Jurisdiction Title (e.g., 'Advocate in Faridabad | District Courts Sector 12') -> Chamber Presence & Regional Expertise -> Courts Covered in Zone -> Key Practice Areas Handled -> Local Process & FAQs -> Direct Contact CTA",
+    "admin_dashboard": "Clean minimalist tabular interface in Deep Navy & White with status badges (New, Contacted, In Progress, Archived), filterable enquiries list, and article draft manager."
+  },
+  "accessibility_and_testing": {
+    "data_testid_rule": "Every button, link, form field, tab, modal trigger, and filter MUST have an explicit data-testid attribute in kebab-case (e.g. data-testid='hero-book-consultation-btn').",
+    "contrast_wcag": "Text contrast strictly exceeds WCAG AA (Navy #0B1F33 on Warm Ivory #F8F6F1 ratio is ~14.8:1). Muted Gold is used for background fills with dark text or as borders/accents, never for small text on white."
+  },
+  "instructions_to_main_agent": [
+    "Use Javascript (.js / .jsx) files.",
+    "Implement Lenis for smooth momentum scrolling on top of React.",
+    "Ensure all 18 practice area pages and location SEO pages have distinct content, breadcrumbs, H1s, FAQs, and data-testid attributes.",
+    "Create a clean, functional Admin Dashboard at /admin with simulated auth or token state for enquiry management and blog creation.",
+    "Do NOT use markdown wrapping when generating or referencing this json file."
+  ]
+}
