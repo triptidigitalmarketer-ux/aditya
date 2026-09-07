@@ -94,13 +94,22 @@ const Courts = () => (
             engagement.
           </p>
         </div>
-        <Link
-          to="/advocate-faridabad"
-          data-testid="courts-faridabad-link"
-          className="mt-8 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
-        >
-          About the Faridabad Chamber <ArrowUpRight className="h-4 w-4" />
-        </Link>
+        <div className="mt-8 flex flex-wrap gap-6">
+          <Link
+            to="/supreme-court-criminal-lawyer"
+            data-testid="courts-sc-criminal-link"
+            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
+          >
+            Criminal Matters in the Supreme Court <ArrowUpRight className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/advocate-faridabad"
+            data-testid="courts-faridabad-link"
+            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
+          >
+            About the Faridabad Chamber <ArrowUpRight className="h-4 w-4" />
+          </Link>
+        </div>
       </Reveal>
     </section>
     <CtaSection title="Not Sure Which Court Has Jurisdiction Over Your Matter?" text="That is exactly what the first consultation establishes. Share the outline of your matter and receive a clear answer." />

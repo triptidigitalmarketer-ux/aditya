@@ -217,7 +217,7 @@ const Home = () => {
             <GoldRule className="mt-3 w-16" />
             <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
               <h2 className="max-w-xl font-serif text-3xl text-navy sm:text-4xl">
-                Focused practice across five areas of law
+                Focused practice across six areas of law
               </h2>
               <Link to="/practice-areas" data-testid="view-all-practice-areas" className="text-sm font-medium uppercase tracking-wider text-navy underline-offset-4 hover:text-gold-dark hover:underline">
                 View All Practice Areas
@@ -248,20 +248,19 @@ const Home = () => {
                 </div>
               </Reveal>
             ))}
-            <Reveal delay={0.45}>
+            <Reveal delay={0.45} className="md:col-span-2 lg:col-span-3">
               <Link
                 to="/contact"
                 data-testid="practice-cta-card"
-                className="flex h-full flex-col justify-between bg-navy p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-navy-light hover:shadow-xl"
+                className="flex flex-col justify-between gap-8 bg-navy p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-navy-light hover:shadow-xl sm:flex-row sm:items-center lg:px-12"
               >
                 <div>
-                  <span className="font-serif text-sm italic text-gold">→</span>
-                  <h3 className="mt-3 font-serif text-2xl text-ivory">Not sure which area fits your matter?</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ivory/70">
+                  <h3 className="font-serif text-2xl text-ivory">Not sure which area fits your matter?</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-ivory/70">
                     Describe the situation briefly and the chamber will direct your enquiry appropriately.
                   </p>
                 </div>
-                <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-gold">
+                <span className="inline-flex shrink-0 items-center gap-2 text-sm font-medium uppercase tracking-wider text-gold">
                   Book a Consultation <ArrowRight className="h-4 w-4" />
                 </span>
               </Link>

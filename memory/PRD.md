@@ -25,6 +25,12 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Admin dashboard at /admin (login: admin@adityagauradvocate.in) — enquiries inbox with status management, article editor (draft/publish).
 - Verified: admin login + cookie session, enquiry submit → admin list → status update, article publish → public listing/detail, unauthenticated /admin APIs return 401, all major pages render.
 
+### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
+- New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
+- Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.
+- Specialised statutes (PMLA/ED/NDPS/POCSO/UAPA/cyber/economic offences) mentioned only with hedged, non-claiming language (unverified — do not assert experience until confirmed).
+- New "Supreme Court Criminal Practice" category added to nav data (home bento, hub, footer); cross-links from criminal-law/bail/anticipatory-bail/fir-quashing pages and Courts & Jurisdiction page; sitemap updated.
+
 ## Pending / Blockers
 - RESEND_API_KEY not set → enquiry email notifications skipped (dashboard works regardless). Need Resend key + verified sender + recipient email.
 - Placeholder phone/WhatsApp/email/social links (user to supply verified details).

@@ -54,7 +54,7 @@ export const CRIMINAL_PAGES = [
         a: "Yes — both for victims seeking to file cyber crime complaints and for persons facing allegations arising out of online transactions, social media, or digital evidence. These matters often involve parallel proceedings before the cyber cell and the criminal courts.",
       },
     ],
-    related: ["bail-lawyer", "anticipatory-bail-lawyer", "fir-quashing-lawyer", "cheque-bounce-lawyer"],
+    related: ["bail-lawyer", "anticipatory-bail-lawyer", "fir-quashing-lawyer", "supreme-court-criminal-lawyer", "cheque-bounce-lawyer"],
   },
   {
     slug: "bail-lawyer",
@@ -111,7 +111,7 @@ export const CRIMINAL_PAGES = [
         a: "Yes. Matters are handled across jurisdictions; where a matter lies outside Delhi NCR, appearances and local coordination are arranged depending on the nature of the case.",
       },
     ],
-    related: ["anticipatory-bail-lawyer", "criminal-law-lawyer", "fir-quashing-lawyer"],
+    related: ["anticipatory-bail-lawyer", "criminal-law-lawyer", "fir-quashing-lawyer", "supreme-court-bail-lawyer"],
   },
   {
     slug: "anticipatory-bail-lawyer",
@@ -168,7 +168,7 @@ export const CRIMINAL_PAGES = [
         a: "Yes. Outstation clients are common in anticipatory bail matters. Consultation and preparation can be done remotely, and appearances are managed so that the application is filed at the earliest workable date.",
       },
     ],
-    related: ["bail-lawyer", "criminal-law-lawyer", "fir-quashing-lawyer"],
+    related: ["bail-lawyer", "criminal-law-lawyer", "fir-quashing-lawyer", "supreme-court-bail-lawyer"],
   },
   {
     slug: "fir-quashing-lawyer",
@@ -224,6 +224,6 @@ export const CRIMINAL_PAGES = [
         a: "Timelines vary with the court's roster and whether the state contests the petition. Settlement-based matters can conclude faster; contested petitions take longer. Interim protection against arrest can be sought while the petition is pending.",
       },
     ],
-    related: ["anticipatory-bail-lawyer", "criminal-law-lawyer", "bail-lawyer"],
+    related: ["anticipatory-bail-lawyer", "criminal-law-lawyer", "bail-lawyer", "supreme-court-criminal-lawyer"],
   },
 ];

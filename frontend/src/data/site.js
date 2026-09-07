@@ -41,6 +41,18 @@ export const PRACTICE_CATEGORIES = [
     ],
   },
   {
+    id: "supreme-court",
+    title: "Supreme Court Criminal Practice",
+    description:
+      "Criminal matters before the Supreme Court of India — special leave petitions, criminal appeals, bail after High Court refusal, and challenges to High Court orders.",
+    pages: [
+      { slug: "supreme-court-criminal-lawyer", label: "Supreme Court Criminal Lawyer" },
+      { slug: "supreme-court-bail-lawyer", label: "Bail in the Supreme Court" },
+      { slug: "supreme-court-criminal-appeal-lawyer", label: "Criminal Appeals" },
+      { slug: "supreme-court-criminal-slp-lawyer", label: "Criminal SLPs" },
+    ],
+  },
+  {
     id: "family",
     title: "Matrimonial & Family Law",
     description:
