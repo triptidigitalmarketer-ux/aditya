@@ -370,6 +370,55 @@ const Home = () => {
         </div>
       </section>
 
+      {/* CLIENT COMMITMENTS */}
+      <section data-testid="client-commitments" className="border-y border-navy/10 bg-cream grain relative">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-3xl text-center">
+            <Reveal>
+              <Overline className="text-center">What Clients Can Expect</Overline>
+              <GoldRule className="mx-auto mt-3 w-16" style={{}} />
+              <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">
+                A standard of practice, kept on every matter
+              </h2>
+            </Reveal>
+          </div>
+          <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Every Enquiry Answered",
+                text: "Each consultation request is read personally and answered — with a clear next step.",
+              },
+              {
+                title: "Honest Case Assessment",
+                text: "The strengths and the weaknesses of your matter, told plainly, before any filing.",
+              },
+              {
+                title: "Updates After Every Date",
+                text: "What happened in court, what it means and what comes next — after every appearance.",
+              },
+              {
+                title: "Complete Confidentiality",
+                text: "Your matter is discussed with no one. Professional confidence is absolute.",
+              },
+            ].map((c, i) => (
+              <Reveal key={c.title} delay={i * 0.08}>
+                <div data-testid={`commitment-${i + 1}`} className="relative bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span className="absolute -top-4 left-6 font-serif text-6xl italic leading-none text-gold/60 select-none" aria-hidden="true">&ldquo;</span>
+                  <h3 className="mt-3 font-serif text-lg text-navy">{c.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-charcoal/70">{c.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-12 max-w-xl text-center text-xs italic leading-relaxed text-charcoal/50">
+              Client testimonials will be published here with the client's consent, as and when genuine feedback is
+              received. In line with the rules governing the profession, no review is solicited or invented.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* LOCATIONS */}
       <section data-testid="locations-grid" className="border-y border-navy/10 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">

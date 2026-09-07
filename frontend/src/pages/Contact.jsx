@@ -89,6 +89,9 @@ const Contact = () => (
                   <p className="mt-2.5 text-base text-ivory/85" data-testid="contact-office-hours">
                     {SITE.officeHours}
                   </p>
+                  <p className="mt-1.5 text-sm text-ivory/60" data-testid="contact-sunday-hours">
+                    {SITE.officeHoursSunday}
+                  </p>
                 </li>
               </ul>
               <a
