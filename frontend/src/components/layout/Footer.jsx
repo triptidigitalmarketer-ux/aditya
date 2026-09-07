@@ -15,25 +15,27 @@ const Footer = () => (
             Professional legal representation across Faridabad, Delhi NCR and India — before District Courts,
             High Courts and the Supreme Court of India.
           </p>
-          <div className="mt-6 flex gap-3">
-            {[
-              { icon: Linkedin, href: SITE.socials.linkedin, id: "footer-linkedin" },
-              { icon: Instagram, href: SITE.socials.instagram, id: "footer-instagram" },
-              { icon: Twitter, href: SITE.socials.twitter, id: "footer-twitter" },
-            ].map(({ icon: Icon, href, id }) => (
-              <a
-                key={id}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                data-testid={id}
-                aria-label={id}
-                className="flex h-9 w-9 items-center justify-center border border-ivory/20 text-ivory/70 transition-colors hover:border-gold hover:text-gold"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
+          {SITE.socials && (
+            <div className="mt-6 flex gap-3">
+              {[
+                { icon: Linkedin, href: SITE.socials.linkedin, id: "footer-linkedin" },
+                { icon: Instagram, href: SITE.socials.instagram, id: "footer-instagram" },
+                { icon: Twitter, href: SITE.socials.twitter, id: "footer-twitter" },
+              ].map(({ icon: Icon, href, id }) => (
+                <a
+                  key={id}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={id}
+                  aria-label={id}
+                  className="flex h-9 w-9 items-center justify-center border border-ivory/20 text-ivory/70 transition-colors hover:border-gold hover:text-gold"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+          )}
         </div>
 
         <div>

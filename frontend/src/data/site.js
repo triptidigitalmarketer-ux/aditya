@@ -10,11 +10,7 @@ export const SITE = {
   whatsappHref: "https://wa.me/919582885482",
   email: "contact@adityagaurassociates.com",
   officeHours: "Monday – Saturday · 10:00 AM – 7:00 PM",
-  socials: {
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    twitter: "https://x.com/",
-  },
+  socials: null,
   siteName: "Aditya Gaur, Advocate",
 };
 
