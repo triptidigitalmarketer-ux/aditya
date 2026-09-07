@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2, ChevronLeft, ChevronRight } from "lucide-react";
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
@@ -65,6 +65,13 @@ const COURT_PILLARS = [
 
 const Home = () => {
   const heroRef = useRef(null);
+  const testimonialsRef = useRef(null);
+  const scrollTestimonials = (dir) => {
+    const el = testimonialsRef.current;
+    if (!el) return;
+    const perView = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+    el.scrollBy({ left: dir * (el.clientWidth / perView), behavior: "smooth" });
+  };
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const portraitY = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const [articles, setArticles] = useState([]);
@@ -615,40 +622,69 @@ const Home = () => {
       <section data-testid="testimonials-section" className="bg-navy grain relative">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <Reveal>
-            <Overline className="text-gold">Client Testimonials</Overline>
-            <GoldRule className="mt-3 w-16" />
-            <h2 className="mt-5 font-serif text-3xl text-ivory sm:text-4xl">What Our Clients Say</h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70">
-              Client experiences and feedback reflect the professional approach to handling legal matters.
-            </p>
-          </Reveal>
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[
-              {
-                text: "This space is reserved for a genuine client testimonial. Feedback from a real client engagement will be published here with the client's consent.",
-                name: "Client Name",
-                matter: "Practice Area",
-              },
-              {
-                text: "This space is reserved for a genuine client testimonial. Only verified feedback from actual matters will be featured here.",
-                name: "Client Name",
-                matter: "Practice Area",
-              },
-              {
-                text: "This space is reserved for a genuine client testimonial. Feedback is published as received — never edited, never invented.",
-                name: "Client Name",
-                matter: "Practice Area",
-              },
-            ].map((t, i) => (
-              <Reveal key={i} delay={i * 0.08}>
-                <figure
-                  data-testid={`testimonial-${i + 1}`}
-                  className="flex h-full flex-col border border-ivory/15 bg-navy-light/60 p-8 transition-colors duration-300 hover:border-gold/40"
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <Overline className="text-gold">Client Testimonials</Overline>
+                <GoldRule className="mt-3 w-16" />
+                <h2 className="mt-5 font-serif text-3xl text-ivory sm:text-4xl">What Our Clients Say</h2>
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70">
+                  Client experiences and feedback reflect the professional approach to handling legal matters.
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <button
+                  data-testid="testimonials-prev"
+                  onClick={() => scrollTestimonials(-1)}
+                  aria-label="Previous testimonials"
+                  className="flex h-11 w-11 items-center justify-center border border-ivory/25 text-ivory transition-all duration-300 hover:border-gold hover:bg-gold hover:text-navy active:scale-95"
                 >
-                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold/70">
-                    Placeholder — awaiting genuine client feedback
-                  </span>
-                  <blockquote className="mt-5 flex-1 text-base italic leading-relaxed text-ivory/85">
+                  <ChevronLeft className="h-5 w-5" />
+                </button>
+                <button
+                  data-testid="testimonials-next"
+                  onClick={() => scrollTestimonials(1)}
+                  aria-label="Next testimonials"
+                  className="flex h-11 w-11 items-center justify-center border border-ivory/25 text-ivory transition-all duration-300 hover:border-gold hover:bg-gold hover:text-navy active:scale-95"
+                >
+                  <ChevronRight className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div
+              ref={testimonialsRef}
+              data-testid="testimonials-track"
+              className="mt-12 flex gap-6 overflow-x-auto pb-2 snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {[
+                {
+                  text: "This space is reserved for a genuine client testimonial. Feedback from a real client engagement will be published here with the client's consent.",
+                  name: "Client Name",
+                  matter: "Practice Area",
+                },
+                {
+                  text: "This space is reserved for a genuine client testimonial. Only verified feedback from actual matters will be featured here.",
+                  name: "Client Name",
+                  matter: "Practice Area",
+                },
+                {
+                  text: "This space is reserved for a genuine client testimonial. Feedback is published as received — never edited, never invented.",
+                  name: "Client Name",
+                  matter: "Practice Area",
+                },
+                {
+                  text: "This space is reserved for a genuine client testimonial. Client identity and matter details are shared only with consent.",
+                  name: "Client Name",
+                  matter: "Practice Area",
+                },
+              ].map((t, i) => (
+                <figure
+                  key={i}
+                  data-testid={`testimonial-${i + 1}`}
+                  className="flex h-auto min-w-full snap-start flex-col border border-ivory/15 bg-navy-light/60 p-8 transition-colors duration-300 hover:border-gold/40 sm:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)]"
+                >
+                  <blockquote className="flex-1 text-base italic leading-relaxed text-ivory/85">
                     &ldquo;{t.text}&rdquo;
                   </blockquote>
                   <figcaption className="mt-6 border-t border-ivory/10 pt-4">
@@ -656,14 +692,12 @@ const Home = () => {
                     <p className="mt-1 text-xs uppercase tracking-wider text-ivory/50">{t.matter}</p>
                   </figcaption>
                 </figure>
-              </Reveal>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-10 max-w-2xl text-xs italic leading-relaxed text-ivory/45">
-              Testimonials are published only from genuine client feedback, received with the client's consent. The
-              cards above are placeholders and will be replaced as verified reviews are received. No ratings or
-              outcomes are displayed unless they come from an actual client review.
+            <p className="mt-8 max-w-2xl text-xs italic leading-relaxed text-ivory/45">
+              Sample cards shown above — genuine client feedback will be published here with consent.
             </p>
           </Reveal>
         </div>
