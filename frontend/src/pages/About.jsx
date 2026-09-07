@@ -7,12 +7,12 @@ import CtaSection from "@/components/CtaSection";
 import { SITE, PORTRAIT_URL, PRACTICE_CATEGORIES } from "@/data/site";
 
 const BIO_FIELDS = [
-  { label: "Qualification", value: "[To be updated — verified qualification details will be published here]" },
-  { label: "Bar Enrollment", value: "[To be updated — Bar Council enrollment details will be published here]" },
-  { label: "Experience", value: "[To be updated — professional experience details will be published here]" },
+  { label: "Qualification", value: "Verified details will be published here shortly." },
+  { label: "Bar Enrollment", value: "Verified details will be published here shortly." },
+  { label: "Experience", value: "Verified details will be published here shortly." },
   { label: "Courts", value: "District Courts (Faridabad and across Delhi NCR), High Courts, and the Supreme Court of India — subject to jurisdiction and the nature of the matter." },
   { label: "Professional Focus", value: "Criminal defence, matrimonial and family law, property and civil disputes, cheque bounce and debt recovery, and corporate-commercial matters." },
-  { label: "Practice Areas", value: "Criminal Law & Defence · Matrimonial & Family Law · Property & Civil Law · Cheque Bounce & Debt Recovery · Corporate & Commercial Law" },
+  { label: "Practice Areas", value: "Criminal Law & Defence · Supreme Court Criminal Practice · Matrimonial & Family Law · Property & Civil Law · Cheque Bounce & Debt Recovery · Corporate & Commercial Law" },
 ];
 
 const About = () => (
@@ -31,7 +31,7 @@ const About = () => (
               <div className="absolute -left-3 -top-3 h-full w-full border border-gold/50" aria-hidden="true" />
               <img
                 src={PORTRAIT_URL}
-                alt="Aditya Gaur, Advocate — professional portrait (placeholder, to be replaced with verified photograph)"
+                alt="Aditya Gaur, Advocate"
                 data-testid="about-portrait"
                 className="relative aspect-[4/5] w-full object-cover object-top"
               />
@@ -69,7 +69,7 @@ const About = () => (
               ))}
             </dl>
             <p className="mt-4 text-xs italic text-charcoal/50">
-              Professional details marked "[To be updated]" will be published once verified information is available.
+              Professional details are published here once verified.
             </p>
           </Reveal>
 

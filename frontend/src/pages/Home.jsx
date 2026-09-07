@@ -159,7 +159,7 @@ const Home = () => {
               <motion.div style={{ y: portraitY }} className="relative overflow-hidden bg-navy/5">
                 <img
                   src={PORTRAIT_URL}
-                  alt="Aditya Gaur, Advocate — professional portrait (placeholder, to be replaced)"
+                  alt="Aditya Gaur, Advocate"
                   data-testid="hero-portrait"
                   className="aspect-[4/5] w-full object-cover object-top"
                   loading="eager"
