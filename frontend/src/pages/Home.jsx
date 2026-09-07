@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2, MessagesSquare } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2 } from "lucide-react";
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
@@ -12,24 +12,24 @@ const TRUST_ITEMS = ["Faridabad Chamber", "Delhi NCR", "Pan-India Matters", "Hig
 
 const USPS = [
   {
-    icon: MapPin,
-    title: "Delhi NCR Coverage",
-    text: "Matters handled across Delhi, Faridabad, Noida, Greater Noida and Gurugram.",
+    num: "01",
+    title: "Focused on Resolution",
+    text: "A practical and focused approach towards achieving effective resolution of legal matters.",
   },
   {
-    icon: Landmark,
-    title: "Court Representation",
-    text: "Matters relating to District Courts, High Courts and the Supreme Court of India.",
+    num: "02",
+    title: "Strategic Case Handling",
+    text: "Careful analysis of the facts, documents and applicable law to develop an appropriate legal strategy.",
   },
   {
-    icon: Globe2,
-    title: "Pan-India Matters",
-    text: "Legal matters handled across jurisdictions in India, subject to the nature and jurisdiction of the case.",
+    num: "03",
+    title: "Strong Legal Representation",
+    text: "Professional representation across relevant courts and legal proceedings.",
   },
   {
-    icon: MessagesSquare,
-    title: "Client-Focused Approach",
-    text: "Clear communication, case assessment and practical legal guidance.",
+    num: "04",
+    title: "Clear Legal Guidance",
+    text: "Clear communication and practical guidance throughout the legal process.",
   },
 ];
 
@@ -188,7 +188,8 @@ const Home = () => {
                   data-testid={`usp-${i + 1}`}
                   className="border-l border-navy/10 pl-6 transition-colors duration-300 hover:border-gold"
                 >
-                  <u.icon className="h-5 w-5 text-gold-dark" strokeWidth={1.5} />
+                  <span className="font-serif text-2xl italic text-gold/80">{u.num}</span>
+                  <span className="mt-3 block h-px w-8 bg-gold/70" />
                   <h2 className="mt-4 font-serif text-xl text-navy">{u.title}</h2>
                   <p className="mt-2.5 text-sm leading-relaxed text-charcoal/70">{u.text}</p>
                 </div>
