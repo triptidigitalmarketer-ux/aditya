@@ -42,6 +42,10 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Homepage "Selected Judgments & Legal Matters" section added (before testimonials) with 3 clearly-marked placeholder rows + required neutral-outcome note; "View Judgment" links disabled until verified judgments are supplied.
 - insightVisual now rotates 2 image variants per topic so same-topic articles don't repeat images.
 
+### Update 2026-09-07 (night 2) — High Court SEO page
+- Dedicated /high-court-lawyer page (single page for the whole cluster — no separate "High Court Advocate" page, per instruction). H1: "High Court Lawyer & Advocate in India". H2s: High Court Legal Representation, High Court Litigation Matters, Types of Matters, How a High Court Engagement Works, FAQ. Keywords (lawyer/advocate/legal services variants) woven naturally; jurisdiction framing kept verified-safe.
+- Homepage Courts & Jurisdiction "High Courts" card now links to /high-court-lawyer with "High Court Legal Services →" CTA; /courts-jurisdiction bottom links include the HC page. Sitemap updated.
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.

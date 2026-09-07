@@ -96,6 +96,13 @@ const Courts = () => (
         </div>
         <div className="mt-8 flex flex-wrap gap-6">
           <Link
+            to="/high-court-lawyer"
+            data-testid="courts-high-court-link"
+            className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
+          >
+            High Court Lawyer &amp; Advocate <ArrowUpRight className="h-4 w-4" />
+          </Link>
+          <Link
             to="/supreme-court-criminal-lawyer"
             data-testid="courts-sc-criminal-link"
             className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"

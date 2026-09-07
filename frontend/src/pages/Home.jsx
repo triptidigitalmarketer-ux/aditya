@@ -58,7 +58,7 @@ const CHAPTERS = [
 
 const COURT_PILLARS = [
   { icon: Building2, title: "District Courts", text: "Trial-level litigation at Faridabad and district courts across Delhi NCR." },
-  { icon: Landmark, title: "High Courts", text: "Bail, quashing, writs and appeals, subject to jurisdiction." },
+  { icon: Landmark, title: "High Courts", text: "High Court lawyer and advocate services — bail, quashing, writs and appeals before the High Court having jurisdiction over the matter.", to: "/high-court-lawyer" },
   { icon: Scale, title: "Supreme Court", text: "Matters before the Supreme Court of India, per applicable procedure." },
   { icon: Globe2, title: "Pan-India", text: "Matters across India, depending on nature and jurisdiction." },
 ];
@@ -341,15 +341,35 @@ const Home = () => {
             </h2>
           </Reveal>
           <div className="mt-14 grid grid-cols-1 gap-px bg-ivory/10 sm:grid-cols-2 lg:grid-cols-4">
-            {COURT_PILLARS.map((c, i) => (
-              <Reveal key={c.title} delay={i * 0.1}>
-                <div className="h-full bg-navy p-8 transition-colors duration-300 hover:bg-navy-light">
+            {COURT_PILLARS.map((c, i) => {
+              const inner = (
+                <>
                   <c.icon className="h-6 w-6 text-gold" strokeWidth={1.5} />
                   <h3 className="mt-5 font-serif text-xl text-ivory">{c.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-ivory/65">{c.text}</p>
-                </div>
-              </Reveal>
-            ))}
+                  {c.to && (
+                    <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gold">
+                      High Court Legal Services <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  )}
+                </>
+              );
+              return (
+                <Reveal key={c.title} delay={i * 0.1}>
+                  {c.to ? (
+                    <Link
+                      to={c.to}
+                      data-testid="court-pillar-high-courts"
+                      className="block h-full bg-navy p-8 transition-colors duration-300 hover:bg-navy-light"
+                    >
+                      {inner}
+                    </Link>
+                  ) : (
+                    <div className="h-full bg-navy p-8 transition-colors duration-300 hover:bg-navy-light">{inner}</div>
+                  )}
+                </Reveal>
+              );
+            })}
           </div>
           <Reveal delay={0.3}>
             <Link
