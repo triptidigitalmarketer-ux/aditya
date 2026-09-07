@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, User } from "lucide-react";
 import Seo from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
@@ -7,7 +7,7 @@ import CtaSection from "@/components/CtaSection";
 import { SITE, PORTRAIT_URL, PRACTICE_CATEGORIES } from "@/data/site";
 
 const BIO_FIELDS = [
-  { label: "Qualification", value: "Verified details will be published here shortly." },
+  { label: "Qualification", value: "B.Tech | LL.B. | LL.M." },
   { label: "Bar Enrollment", value: "Verified details will be published here shortly." },
   { label: "Experience", value: "Verified details will be published here shortly." },
   { label: "Courts", value: "District Courts (Faridabad and across Delhi NCR), High Courts, and the Supreme Court of India — subject to jurisdiction and the nature of the matter." },
@@ -104,53 +104,81 @@ const About = () => (
     <section className="border-t border-navy/10 bg-white" data-testid="team-section">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <Reveal>
-          <Overline>The Chambers</Overline>
+          <Overline>The Team</Overline>
           <GoldRule className="mt-3 w-16" />
-          <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Our Team</h2>
+          <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Aditya Gaur &amp; Associates</h2>
         </Reveal>
-        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12">
-          <Reveal className="lg:col-span-4">
-            <div className="relative">
-              <div className="absolute -left-3 -top-3 h-full w-full border border-gold/50" aria-hidden="true" />
-              <img
-                src={PORTRAIT_URL}
-                alt="Aditya Gaur — Founder & Managing Advocate, Aditya Gaur & Associates"
-                data-testid="team-founder-photo"
-                loading="lazy"
-                className="relative aspect-[4/5] w-full object-cover object-top"
-              />
+
+        {/* Featured profile */}
+        <Reveal delay={0.08}>
+          <div
+            className="mt-12 grid grid-cols-1 gap-10 border border-navy/10 bg-cream p-8 sm:grid-cols-12 lg:p-12"
+            data-testid="team-featured"
+          >
+            <div className="sm:col-span-4">
+              <div className="relative">
+                <div className="absolute -left-3 -top-3 h-full w-full border border-gold/50" aria-hidden="true" />
+                <img
+                  src={PORTRAIT_URL}
+                  alt="Aditya Gaur — Advocate, Aditya Gaur & Associates"
+                  data-testid="team-founder-photo"
+                  loading="lazy"
+                  className="relative aspect-[4/5] w-full object-cover object-top"
+                />
+              </div>
             </div>
-            <div className="mt-6">
-              <p className="font-serif text-2xl text-navy" data-testid="team-founder-name">Aditya Gaur</p>
-              <p className="mt-1.5 text-xs font-mono uppercase tracking-[0.25em] text-gold-dark">
-                Founder &amp; Managing Advocate
+            <div className="flex flex-col justify-center sm:col-span-8">
+              <p className="font-serif text-3xl text-navy" data-testid="team-founder-name">
+                Aditya Gaur
               </p>
-              <p className="mt-3 max-w-sm text-sm leading-relaxed text-charcoal/70">
+              <p className="mt-1.5 text-xs font-mono uppercase tracking-[0.25em] text-gold-dark">Advocate</p>
+              <p className="mt-4 text-sm font-semibold tracking-wide text-navy" data-testid="team-founder-quals">
+                B.Tech&nbsp;|&nbsp;LL.B.&nbsp;|&nbsp;LL.M.
+              </p>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-charcoal/80">
                 Chamber opposite the District &amp; Sessions Court, Faridabad. Practice across Delhi NCR and
-                Pan-India.
+                Pan-India — before District Courts, High Courts and the Supreme Court of India, subject to the
+                jurisdiction and nature of each matter.
               </p>
             </div>
-          </Reveal>
-          <Reveal delay={0.15} className="lg:col-span-8">
-            <div className="flex h-full flex-col justify-center border border-navy/10 bg-cream p-8 lg:p-12" data-testid="team-associates-card">
-              <h3 className="font-serif text-2xl text-navy">Associates &amp; Assisting Counsel</h3>
-              <p className="mt-4 text-base leading-relaxed text-charcoal/80">
-                Aditya Gaur &amp; Associates works with a network of associates and assisting counsel across Delhi
-                NCR, so that every matter — whether before a District Court, a High Court or the Supreme Court of
-                India — is attended with preparation and presence.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-charcoal/80">
-                Individual profiles of team members are published here as they are formally announced.
-              </p>
-              <Link
-                to="/contact"
-                data-testid="team-contact-link"
-                className="mt-7 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
+          </div>
+        </Reveal>
+
+        {/* Team members */}
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {[1, 2, 3].map((n) => (
+            <Reveal key={n} delay={0.1 + n * 0.06}>
+              <div
+                data-testid={`team-member-${n}`}
+                className="flex h-full flex-col border border-dashed border-navy/20 bg-cream/60"
               >
-                Work With The Chambers <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </Reveal>
+                <div className="flex aspect-[16/10] items-center justify-center bg-navy/5">
+                  <div className="flex h-16 w-16 items-center justify-center border border-gold/40 text-gold-dark">
+                    <User className="h-7 w-7" strokeWidth={1.25} />
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
+                    Awaiting verified profile
+                  </span>
+                  <p className="mt-3 font-serif text-xl text-navy">Team Member {n}</p>
+                  <p className="mt-2 text-xs uppercase tracking-wider text-charcoal/50">
+                    Designation — to be updated
+                  </p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-charcoal/50">
+                    Qualification — to be updated
+                  </p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-charcoal/50">
+                    Role / Practice Area — to be updated
+                  </p>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-charcoal/60">
+                    Photo, designation, qualification and a short professional description will be published here
+                    once the member's verified details are formally provided.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

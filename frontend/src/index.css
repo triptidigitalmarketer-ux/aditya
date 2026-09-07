@@ -102,6 +102,16 @@
 .article-content a:hover { color: #A28549; }
 .article-content strong { font-weight: 600; color: #0B1F33; }
 
+/* Dark sidebar enquiry form */
+.sidebar-dark button[type="submit"] {
+    background: #B89B5E;
+    color: #0B1F33;
+}
+.sidebar-dark button[type="submit"]:hover {
+    background: #A28549;
+    color: #F8F6F1;
+}
+
 /* ============================================================
    GLOBAL TYPOGRAPHY — Roboto (Roboto Flex) only, site-wide
    H1 800 · H2 700 · H3/H4 600 · Body 400 · Nav/Labels 500 · CTA 600

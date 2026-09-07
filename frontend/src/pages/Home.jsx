@@ -259,11 +259,79 @@ const Home = () => {
         </div>
       </section>
 
+      {/* MANIFESTO CHAPTERS */}
+      <section data-testid="approach-chapters" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
+        <Reveal>
+          <Overline>02 — How Matters Are Handled</Overline>
+          <GoldRule className="mt-3 w-16" />
+        </Reveal>
+        <div className="mt-12 space-y-0">
+          {CHAPTERS.map((ch, i) => (
+            <Reveal key={ch.num} delay={i * 0.06}>
+              <div className="grid grid-cols-1 gap-4 border-t border-navy/10 py-10 transition-colors duration-300 hover:bg-white/60 sm:grid-cols-12 sm:gap-8 sm:px-4">
+                <span className="font-serif text-5xl italic text-gold/70 sm:col-span-2">{ch.num}</span>
+                <h3 className="font-serif text-2xl text-navy sm:col-span-4">{ch.title}</h3>
+                <p className="text-base leading-relaxed text-charcoal/75 sm:col-span-6">{ch.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* CLIENT COMMITMENTS */}
+      <section data-testid="client-commitments" className="border-y border-navy/10 bg-cream grain relative">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-3xl text-center">
+            <Reveal>
+              <Overline className="text-center">What Clients Can Expect</Overline>
+              <GoldRule className="mx-auto mt-3 w-16" style={{}} />
+              <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">
+                A standard of practice, kept on every matter
+              </h2>
+            </Reveal>
+          </div>
+          <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Every Enquiry Answered",
+                text: "Each consultation request is read personally and answered — with a clear next step.",
+              },
+              {
+                title: "Honest Case Assessment",
+                text: "The strengths and the weaknesses of your matter, told plainly, before any filing.",
+              },
+              {
+                title: "Updates After Every Date",
+                text: "What happened in court, what it means and what comes next — after every appearance.",
+              },
+              {
+                title: "Complete Confidentiality",
+                text: "Your matter is discussed with no one. Professional confidence is absolute.",
+              },
+            ].map((c, i) => (
+              <Reveal key={c.title} delay={i * 0.08}>
+                <div data-testid={`commitment-${i + 1}`} className="relative bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span className="absolute -top-4 left-6 font-serif text-6xl italic leading-none text-gold/60 select-none" aria-hidden="true">&ldquo;</span>
+                  <h3 className="mt-3 font-serif text-lg text-navy">{c.title}</h3>
+                  <p className="mt-2.5 text-sm leading-relaxed text-charcoal/70">{c.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.2}>
+            <p className="mx-auto mt-12 max-w-xl text-center text-xs italic leading-relaxed text-charcoal/50">
+              Client testimonials will be published here with client consent, as and when genuine feedback is
+              received. In line with the rules governing the profession, no review is solicited or invented.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
       {/* PRACTICE AREAS BENTO */}
       <section data-testid="practice-bento" className="border-y border-navy/10 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
           <Reveal>
-            <Overline>02 — Practice Areas</Overline>
+            <Overline>03 — Practice Areas</Overline>
             <GoldRule className="mt-3 w-16" />
             <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
               <h2 className="max-w-xl font-serif text-3xl text-navy sm:text-4xl">
@@ -334,7 +402,7 @@ const Home = () => {
       <section data-testid="courts-strip" className="bg-navy grain relative">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <Reveal>
-            <Overline className="text-gold">03 — Courts & Jurisdiction</Overline>
+            <Overline className="text-gold">04 — Courts & Jurisdiction</Overline>
             <GoldRule className="mt-3 w-16" />
             <h2 className="mt-5 max-w-2xl font-serif text-3xl text-ivory sm:text-4xl">
               From the District Court at Faridabad to the Supreme Court of India
@@ -383,118 +451,87 @@ const Home = () => {
         </div>
       </section>
 
-      {/* MANIFESTO CHAPTERS */}
-      <section data-testid="approach-chapters" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
-        <Reveal>
-          <Overline>04 — How Matters Are Handled</Overline>
-          <GoldRule className="mt-3 w-16" />
-        </Reveal>
-        <div className="mt-12 space-y-0">
-          {CHAPTERS.map((ch, i) => (
-            <Reveal key={ch.num} delay={i * 0.06}>
-              <div className="grid grid-cols-1 gap-4 border-t border-navy/10 py-10 transition-colors duration-300 hover:bg-white/60 sm:grid-cols-12 sm:gap-8 sm:px-4">
-                <span className="font-serif text-5xl italic text-gold/70 sm:col-span-2">{ch.num}</span>
-                <h3 className="font-serif text-2xl text-navy sm:col-span-4">{ch.title}</h3>
-                <p className="text-base leading-relaxed text-charcoal/75 sm:col-span-6">{ch.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* CLIENT COMMITMENTS */}
-      <section data-testid="client-commitments" className="border-y border-navy/10 bg-cream grain relative">
+      {/* SELECTED JUDGMENTS & LEGAL MATTERS */}
+      <section data-testid="judgments-section" className="border-y border-navy/10 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <div className="mx-auto max-w-3xl text-center">
-            <Reveal>
-              <Overline className="text-center">What Clients Can Expect</Overline>
-              <GoldRule className="mx-auto mt-3 w-16" style={{}} />
-              <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">
-                A standard of practice, kept on every matter
-              </h2>
-            </Reveal>
-          </div>
-          <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Every Enquiry Answered",
-                text: "Each consultation request is read personally and answered — with a clear next step.",
-              },
-              {
-                title: "Honest Case Assessment",
-                text: "The strengths and the weaknesses of your matter, told plainly, before any filing.",
-              },
-              {
-                title: "Updates After Every Date",
-                text: "What happened in court, what it means and what comes next — after every appearance.",
-              },
-              {
-                title: "Complete Confidentiality",
-                text: "Your matter is discussed with no one. Professional confidence is absolute.",
-              },
-            ].map((c, i) => (
-              <Reveal key={c.title} delay={i * 0.08}>
-                <div data-testid={`commitment-${i + 1}`} className="relative bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                  <span className="absolute -top-4 left-6 font-serif text-6xl italic leading-none text-gold/60 select-none" aria-hidden="true">&ldquo;</span>
-                  <h3 className="mt-3 font-serif text-lg text-navy">{c.title}</h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-charcoal/70">{c.text}</p>
+          <Reveal>
+            <Overline>Judgments</Overline>
+            <GoldRule className="mt-3 w-16" />
+            <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Selected Judgments &amp; Legal Matters</h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-charcoal/75">
+              Publicly available judgments and legal matters in which the chambers has been involved. Each entry
+              states the legal issue in neutral terms and links to the public record.
+            </p>
+          </Reveal>
+          <div className="mt-14 border-t border-navy/10">
+            {[1, 2, 3].map((n) => (
+              <Reveal key={n} delay={n * 0.06}>
+                <div
+                  data-testid={`judgment-${n}`}
+                  className="grid grid-cols-1 gap-6 border-b border-navy/10 py-8 transition-colors duration-300 hover:bg-cream/60 lg:grid-cols-12 lg:px-4"
+                >
+                  <div className="lg:col-span-7">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
+                      Placeholder — to be updated with a verified judgment
+                    </span>
+                    <h3 className="mt-2 font-serif text-xl text-navy">[Case Title — Party v. Party]</h3>
+                    <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-charcoal/70">
+                      A brief, neutral description of the legal issue decided in the matter will appear here — the
+                      question of law or subject matter, stated factually and without reference to outcome.
+                    </p>
+                  </div>
+                  <div className="lg:col-span-5">
+                    <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm lg:justify-items-end lg:text-right">
+                      <div>
+                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Court</dt>
+                        <dd className="mt-1 text-charcoal/80">[Court Name]</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Year</dt>
+                        <dd className="mt-1 text-charcoal/80">[Year]</dd>
+                      </div>
+                      <div className="col-span-2">
+                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Case No.</dt>
+                        <dd className="mt-1 text-charcoal/80">[Case Number]</dd>
+                      </div>
+                    </dl>
+                    <p className="mt-4 lg:text-right">
+                      <span
+                        data-testid={`judgment-link-${n}`}
+                        className="inline-flex cursor-not-allowed items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold-dark/60"
+                        title="Link will be activated with the verified public judgment"
+                      >
+                        View Judgment <ArrowUpRight className="h-3.5 w-3.5" />
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}
           </div>
+          <Reveal delay={0.15}>
+            <Link
+              to="/judgments"
+              data-testid="view-all-judgments"
+              className="mt-8 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
+            >
+              View All Judgments <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Reveal>
           <Reveal delay={0.2}>
-            <p className="mx-auto mt-12 max-w-xl text-center text-xs italic leading-relaxed text-charcoal/50">
-              Client testimonials will be published here with the client's consent, as and when genuine feedback is
-              received. In line with the rules governing the profession, no review is solicited or invented.
+            <p className="mt-8 max-w-3xl text-xs italic leading-relaxed text-charcoal/55">
+              The judgments and legal matters presented are provided for informational purposes. Past case outcomes
+              depend on the facts and circumstances of each matter and do not guarantee similar outcomes in future
+              cases.
             </p>
           </Reveal>
-        </div>
-      </section>
-
-      {/* LOCATIONS */}
-      <section data-testid="locations-grid" className="border-y border-navy/10 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <Reveal>
-            <Overline>05 — Where the Practice Reaches</Overline>
-            <GoldRule className="mt-3 w-16" />
-            <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Faridabad chamber. NCR practice. Pan-India reach.</h2>
-          </Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {LOCATIONS.map((loc, i) => (
-              <Reveal key={loc.slug} delay={i * 0.05}>
-                <Link
-                  to={`/${loc.slug}`}
-                  data-testid={`location-card-${loc.slug}`}
-                  className={`group flex h-full flex-col justify-between border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
-                    loc.primary ? "border-gold/60 bg-navy text-ivory" : "border-navy/10 bg-cream text-navy hover:border-gold/50"
-                  }`}
-                >
-                  <MapPin className={`h-5 w-5 ${loc.primary ? "text-gold" : "text-gold-dark"}`} strokeWidth={1.5} />
-                  <div className="mt-8">
-                    <p className="font-serif text-xl">{loc.label}</p>
-                    {loc.primary && <p className="mt-1 text-[10px] font-mono uppercase tracking-[0.25em] text-gold">Chamber Location</p>}
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-            <Reveal delay={0.4}>
-              <Link
-                to="/contact"
-                data-testid="locations-contact-card"
-                className="group flex h-full flex-col justify-between border border-dashed border-navy/25 p-6 transition-all duration-300 hover:border-gold hover:bg-cream"
-              >
-                <ArrowUpRight className="h-5 w-5 text-gold-dark" />
-                <p className="mt-8 font-serif text-xl text-navy">Your city, your matter</p>
-              </Link>
-            </Reveal>
-          </div>
         </div>
       </section>
 
       {/* INSIGHTS PREVIEW */}
       <section data-testid="insights-preview" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <Reveal>
-          <Overline>06 — Legal Insights</Overline>
+          <Overline>05 — Legal Insights</Overline>
           <GoldRule className="mt-3 w-16" />
           <div className="mt-5 flex flex-wrap items-end justify-between gap-6">
             <h2 className="font-serif text-3xl text-navy sm:text-4xl">Clear writing on Indian legal process</h2>
@@ -574,74 +611,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SELECTED JUDGMENTS & LEGAL MATTERS */}
-      <section data-testid="judgments-section" className="border-y border-navy/10 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-          <Reveal>
-            <Overline>Judgments</Overline>
-            <GoldRule className="mt-3 w-16" />
-            <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Selected Judgments &amp; Legal Matters</h2>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-charcoal/75">
-              Publicly available judgments and legal matters in which the chambers has been involved. Each entry
-              states the legal issue in neutral terms and links to the public record.
-            </p>
-          </Reveal>
-          <div className="mt-14 border-t border-navy/10">
-            {[1, 2, 3].map((n) => (
-              <Reveal key={n} delay={n * 0.06}>
-                <div
-                  data-testid={`judgment-${n}`}
-                  className="grid grid-cols-1 gap-6 border-b border-navy/10 py-8 transition-colors duration-300 hover:bg-cream/60 lg:grid-cols-12 lg:px-4"
-                >
-                  <div className="lg:col-span-7">
-                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
-                      Placeholder — to be updated with a verified judgment
-                    </span>
-                    <h3 className="mt-2 font-serif text-xl text-navy">[Case Title — Party v. Party]</h3>
-                    <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-charcoal/70">
-                      A brief, neutral description of the legal issue decided in the matter will appear here — the
-                      question of law or subject matter, stated factually and without reference to outcome.
-                    </p>
-                  </div>
-                  <div className="lg:col-span-5">
-                    <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm lg:justify-items-end lg:text-right">
-                      <div>
-                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Court</dt>
-                        <dd className="mt-1 text-charcoal/80">[Court Name]</dd>
-                      </div>
-                      <div>
-                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Year</dt>
-                        <dd className="mt-1 text-charcoal/80">[Year]</dd>
-                      </div>
-                      <div className="col-span-2">
-                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Case No.</dt>
-                        <dd className="mt-1 text-charcoal/80">[Case Number]</dd>
-                      </div>
-                    </dl>
-                    <p className="mt-4 lg:text-right">
-                      <span
-                        data-testid={`judgment-link-${n}`}
-                        className="inline-flex cursor-not-allowed items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold-dark/60"
-                        title="Link will be activated with the verified public judgment"
-                      >
-                        View Judgment <ArrowUpRight className="h-3.5 w-3.5" />
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={0.2}>
-            <p className="mt-8 max-w-3xl text-xs italic leading-relaxed text-charcoal/55">
-              The judgments and legal matters presented are provided for informational purposes. Past case outcomes
-              depend on the facts and circumstances of each matter and do not guarantee similar outcomes in future
-              cases.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
       {/* CLIENT TESTIMONIALS */}
       <section data-testid="testimonials-section" className="bg-navy grain relative">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
@@ -697,6 +666,46 @@ const Home = () => {
               outcomes are displayed unless they come from an actual client review.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      {/* LOCATIONS */}
+      <section data-testid="locations-grid" className="border-y border-navy/10 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <Reveal>
+            <Overline>06 — Where the Practice Reaches</Overline>
+            <GoldRule className="mt-3 w-16" />
+            <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Faridabad chamber. NCR practice. Pan-India reach.</h2>
+          </Reveal>
+          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {LOCATIONS.map((loc, i) => (
+              <Reveal key={loc.slug} delay={i * 0.05}>
+                <Link
+                  to={`/${loc.slug}`}
+                  data-testid={`location-card-${loc.slug}`}
+                  className={`group flex h-full flex-col justify-between border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                    loc.primary ? "border-gold/60 bg-navy text-ivory" : "border-navy/10 bg-cream text-navy hover:border-gold/50"
+                  }`}
+                >
+                  <MapPin className={`h-5 w-5 ${loc.primary ? "text-gold" : "text-gold-dark"}`} strokeWidth={1.5} />
+                  <div className="mt-8">
+                    <p className="font-serif text-xl">{loc.label}</p>
+                    {loc.primary && <p className="mt-1 text-[10px] font-mono uppercase tracking-[0.25em] text-gold">Chamber Location</p>}
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+            <Reveal delay={0.4}>
+              <Link
+                to="/contact"
+                data-testid="locations-contact-card"
+                className="group flex h-full flex-col justify-between border border-dashed border-navy/25 p-6 transition-all duration-300 hover:border-gold hover:bg-cream"
+              >
+                <ArrowUpRight className="h-5 w-5 text-gold-dark" />
+                <p className="mt-8 font-serif text-xl text-navy">Your city, your matter</p>
+              </Link>
+            </Reveal>
+          </div>
         </div>
       </section>
 

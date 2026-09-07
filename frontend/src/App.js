@@ -14,6 +14,7 @@ import LocationPage from "@/pages/LocationPage";
 import Insights from "@/pages/Insights";
 import ArticlePage from "@/pages/ArticlePage";
 import Contact from "@/pages/Contact";
+import Judgments from "@/pages/Judgments";
 import Legal from "@/pages/Legal";
 import AdminLogin from "@/pages/admin/AdminLogin";
 import AdminDashboard from "@/pages/admin/AdminDashboard";
@@ -72,6 +73,7 @@ function App() {
                   <Route path="/legal-insights" element={<Insights />} />
                   <Route path="/legal-insights/:slug" element={<ArticlePage />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/judgments" element={<Judgments />} />
                   <Route path="/disclaimer" element={<Legal page="disclaimer" />} />
                   <Route path="/privacy-policy" element={<Legal page="privacy" />} />
                   <Route path="/terms-of-use" element={<Legal page="terms" />} />
