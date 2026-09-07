@@ -187,7 +187,7 @@ const ArticlePage = () => {
                     data-testid={`related-insight-${r.slug}`}
                     className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-cream transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-lg"
                   >
-                    <div className="aspect-[16/9] overflow-hidden">
+                    <div className="aspect-[16/9] shrink-0 overflow-hidden bg-navy/5">
                       <img
                         src={r.image || rv.img}
                         alt={rv.alt(r.title)}

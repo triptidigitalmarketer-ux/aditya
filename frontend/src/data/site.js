@@ -219,13 +219,19 @@ export const LOCATIONS = [
   { slug: "pan-india-legal-services", label: "Pan-India" },
 ];
 
+export const FLAGS = {
+  showTestimonials: false,
+  showJudgments: false,
+};
+
 export const MARQUEE_ITEMS = [
-  "Faridabad Chamber",
-  "Delhi NCR",
-  "Pan-India Matters",
-  "District Courts",
-  "High Courts",
-  "Supreme Court of India",
+  "Criminal Defence",
+  "Bail & Anticipatory Bail",
+  "Matrimonial & Family Law",
+  "Property & Civil Disputes",
+  "Cheque Bounce & Recovery",
+  "Corporate & Commercial",
+  "High Courts & Supreme Court",
 ];
 
 export const PORTRAIT_URL =

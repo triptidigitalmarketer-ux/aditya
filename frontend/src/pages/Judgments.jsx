@@ -27,52 +27,20 @@ const Judgments = () => (
         </p>
       </Reveal>
 
-      <div className="mt-14 border-t border-navy/10">
-        {[1, 2, 3, 4].map((n) => (
-          <Reveal key={n} delay={n * 0.05}>
-            <div
-              data-testid={`judgment-row-${n}`}
-              className="grid grid-cols-1 gap-6 border-b border-navy/10 py-8 transition-colors duration-300 hover:bg-cream/60 lg:grid-cols-12 lg:px-4"
-            >
-              <div className="lg:col-span-7">
-                <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
-                  Placeholder — to be updated with a verified judgment
-                </span>
-                <h2 className="mt-2 font-serif text-xl text-navy">[Case Title — Party v. Party]</h2>
-                <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-charcoal/70">
-                  A brief, neutral description of the legal issue decided in the matter will appear here — the
-                  question of law or subject matter, stated factually and without reference to outcome.
-                </p>
-              </div>
-              <div className="lg:col-span-5">
-                <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm lg:justify-items-end lg:text-right">
-                  <div>
-                    <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Court</dt>
-                    <dd className="mt-1 text-charcoal/80">[Court Name]</dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Year</dt>
-                    <dd className="mt-1 text-charcoal/80">[Year]</dd>
-                  </div>
-                  <div className="col-span-2">
-                    <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Case No.</dt>
-                    <dd className="mt-1 text-charcoal/80">[Case Number]</dd>
-                  </div>
-                </dl>
-                <p className="mt-4 lg:text-right">
-                  <span
-                    data-testid={`judgment-row-link-${n}`}
-                    className="inline-flex cursor-not-allowed items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold-dark/60"
-                    title="Link will be activated with the verified public judgment"
-                  >
-                    View Judgment <ArrowUpRight className="h-3.5 w-3.5" />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </Reveal>
-        ))}
-      </div>
+      <Reveal delay={0.05}>
+        <div
+          className="mt-14 border border-dashed border-navy/25 bg-cream/60 p-12 text-center"
+          data-testid="judgments-coming-soon"
+        >
+          <Scale className="mx-auto h-8 w-8 text-gold-dark" strokeWidth={1.25} />
+          <h2 className="mt-5 font-serif text-2xl text-navy">Entries in Preparation</h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-charcoal/70">
+            Judgments and legal matters are published here after verification against the public record. Each entry
+            will state the court, year, case number and the legal issue in neutral terms, with a link to the
+            publicly available judgment.
+          </p>
+        </div>
+      </Reveal>
 
       <Reveal delay={0.15}>
         <div className="mt-10 flex items-start gap-4 border border-gold/40 bg-cream p-7">

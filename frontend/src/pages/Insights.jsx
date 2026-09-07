@@ -69,7 +69,7 @@ const Insights = () => {
                     data-testid={`insight-card-${a.slug}`}
                     className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-cream transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-xl"
                   >
-                    <div className="aspect-[16/9] overflow-hidden">
+                    <div className="aspect-[16/9] shrink-0 overflow-hidden bg-navy/5">
                       <img
                         src={a.image || vis.img}
                         alt={vis.alt(a.title)}

@@ -51,6 +51,14 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - New hub-only group "RERA & Real Estate" (RERA Matters + Builder-Buyer Disputes + Real Estate Disputes) — homepage still shows the six main categories only.
 - UNVERIFIED services shown as dashed "confirmation pending" placeholders, not published as fact: NRI Matrimonial Matters, DRT Matters, SARFAESI Matters — flip `pending: false` in site.js CATEGORY_SUBS once Aditya confirms.
 
+### Update 2026-09-07 (night 4) — Bug-fix pass (user-reported)
+- Fade-out bug: Reveal now uses viewport amount:0.12 (negative rootMargin removed), stagger delay capped at 0.3s, duration 0.55s, and renders fully visible when prefers-reduced-motion — content can no longer stay hidden. Verified 0 low-opacity text elements at 390/768/1290px across all reported sections.
+- Placeholders gated: FLAGS in site.js (showTestimonials / showJudgments, both false) — homepage judgments + testimonials sections hidden until real content arrives. /judgments page now shows a clean "Entries in Preparation" state (no bracketed placeholders).
+- Both testimonial/commitments disclaimer lines removed from homepage per user.
+- Insights cards: image containers hardened (shrink-0 + bg fallback) — verified no title/image overlap on all 6 cards at 1290px.
+- Duplicate ticker fixed: marquee now scrolls practice-area names; the navy trust strip keeps the location items (no duplicated content).
+- Note: testing_agent tool is not available in this environment; verification was done via automated multi-breakpoint browser checks (opacity sweep + geometry overlap checks + screenshots).
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.

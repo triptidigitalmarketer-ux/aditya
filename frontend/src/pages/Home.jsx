@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2, C
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
-import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual } from "@/data/site";
+import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual, FLAGS } from "@/data/site";
 import { API } from "@/api";
 
 const TRUST_ITEMS = ["Faridabad Chamber", "Delhi NCR", "Pan-India Matters", "High Courts", "Supreme Court"];
@@ -325,12 +325,6 @@ const Home = () => {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-12 max-w-xl text-center text-xs italic leading-relaxed text-charcoal/50">
-              Client testimonials will be published here with client consent, as and when genuine feedback is
-              received. In line with the rules governing the profession, no review is solicited or invented.
-            </p>
-          </Reveal>
         </div>
       </section>
 
@@ -458,7 +452,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SELECTED JUDGMENTS & LEGAL MATTERS */}
+      {/* SELECTED JUDGMENTS & LEGAL MATTERS — hidden until verified judgments are provided */}
+      {FLAGS.showJudgments && (
       <section data-testid="judgments-section" className="border-y border-navy/10 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <Reveal>
@@ -534,6 +529,7 @@ const Home = () => {
           </Reveal>
         </div>
       </section>
+      )}
 
       {/* INSIGHTS PREVIEW */}
       <section data-testid="insights-preview" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
@@ -558,7 +554,7 @@ const Home = () => {
                       data-testid={`insight-card-${a.slug}`}
                       className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-cream transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-xl"
                     >
-                      <div className="aspect-[16/9] overflow-hidden">
+                      <div className="aspect-[16/9] shrink-0 overflow-hidden bg-navy/5">
                         <img
                           src={a.image || vis.img}
                           alt={vis.alt(a.title)}
@@ -602,7 +598,7 @@ const Home = () => {
               ].map((f, i) => (
                 <Reveal key={f.title} delay={i * 0.08}>
                   <div className="h-full overflow-hidden border border-dashed border-navy/20 bg-cream/50">
-                    <div className="aspect-[16/9] overflow-hidden opacity-70">
+                    <div className="aspect-[16/9] shrink-0 overflow-hidden bg-navy/5 opacity-70">
                       <img src={f.img} alt={f.alt} loading="lazy" className="h-full w-full object-cover" />
                     </div>
                     <div className="p-7">
@@ -618,7 +614,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CLIENT TESTIMONIALS */}
+      {/* CLIENT TESTIMONIALS — hidden until genuine client feedback is provided */}
+      {FLAGS.showTestimonials && (
       <section data-testid="testimonials-section" className="bg-navy grain relative">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
           <Reveal>
@@ -702,6 +699,7 @@ const Home = () => {
           </Reveal>
         </div>
       </section>
+      )}
 
       {/* LOCATIONS */}
       <section data-testid="locations-grid" className="border-y border-navy/10 bg-white">
