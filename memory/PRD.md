@@ -36,6 +36,12 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Homepage "What Our Clients Say" testimonials section (before final CTA) with 3 clearly-marked PLACEHOLDER cards — no fake names/ratings/results; replaced when genuine consented feedback is supplied.
 - Legal Insights cards (home + /legal-insights + article pages) now have topic-specific images via keyword-inference helper `insightVisual()` in site.js (criminal/family/property/financial/corporate/court), WebP + lazy loading + descriptive alt text + consistent 16:9. Articles support an optional admin-set image URL (ArticleIn.image); topic image used as fallback.
 
+### Update 2026-09-07 (night) — Insights library + pagination
+- 12 full Legal Insights articles published (seeded via /app/scripts/seed_articles.py + seed_articles_2.py, admin API): anticipatory bail, mutual consent divorce, cheque bounce notice, bail vs anticipatory bail, FIR quashing, Section 138 NI Act, property dispute remedies, RERA complaint process, maintenance & alimony, child custody, civil vs criminal case, criminal SLP. All carry internal links to matching service pages + disclaimer note.
+- /legal-insights now paginates (6/page) with ?page=N deep-linkable URLs, prev/next + numbered controls.
+- Homepage "Selected Judgments & Legal Matters" section added (before testimonials) with 3 clearly-marked placeholder rows + required neutral-outcome note; "View Judgment" links disabled until verified judgments are supplied.
+- insightVisual now rotates 2 image variants per topic so same-topic articles don't repeat images.
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.

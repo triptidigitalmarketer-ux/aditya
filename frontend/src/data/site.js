@@ -113,18 +113,28 @@ export const CATEGORY_IMAGES = {
 };
 
 export const INSIGHT_IMAGES = {
-  criminal:
+  criminal: [
     "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=75&fm=webp",
-  family:
+    "https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=800&q=75&fm=webp",
+  ],
+  family: [
     "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=75&fm=webp",
-  property:
+    "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?auto=format&fit=crop&w=800&q=75&fm=webp",
+  ],
+  property: [
     "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75&fm=webp",
-  financial:
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=75&fm=webp",
+  ],
+  financial: [
     "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=75&fm=webp",
+    "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=75&fm=webp",
+  ],
   corporate:
     "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=75&fm=webp",
-  court:
+  court: [
     "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=75&fm=webp",
+    "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=800&q=75&fm=webp",
+  ],
   default:
     "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=75&fm=webp",
 };
@@ -144,8 +154,11 @@ export const insightVisual = (text) => {
   const hit = INSIGHT_TOPICS.find((topic) => topic.keys.some((k) => t.includes(k)));
   const key = hit ? hit.img : "default";
   const label = hit ? hit.label : "Legal Insight";
+  const pool = INSIGHT_IMAGES[key];
+  const seed = [...t].reduce((s, c) => s + c.charCodeAt(0), 0);
+  const img = Array.isArray(pool) ? pool[seed % pool.length] : pool;
   return {
-    img: INSIGHT_IMAGES[key],
+    img,
     label,
     alt: (title) => `${label} article — ${title}`,
   };

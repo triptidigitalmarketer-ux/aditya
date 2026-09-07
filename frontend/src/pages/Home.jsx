@@ -520,19 +520,19 @@ const Home = () => {
                 {
                   title: "What Is Anticipatory Bail?",
                   label: "Criminal Law",
-                  img: INSIGHT_IMAGES.criminal,
+                  img: INSIGHT_IMAGES.criminal[0],
                   alt: "Courtroom interior relating to anticipatory bail in criminal matters",
                 },
                 {
                   title: "Mutual Consent Divorce Procedure in India",
                   label: "Matrimonial & Family Law",
-                  img: INSIGHT_IMAGES.family,
+                  img: INSIGHT_IMAGES.family[0],
                   alt: "Signing legal documents in a mutual consent divorce matter",
                 },
                 {
                   title: "What to Do After a Cheque Bounce Notice",
                   label: "Financial Disputes",
-                  img: INSIGHT_IMAGES.financial,
+                  img: INSIGHT_IMAGES.financial[0],
                   alt: "Financial documents relating to a cheque bounce notice under Section 138 NI Act",
                 },
               ].map((f, i) => (
@@ -551,6 +551,74 @@ const Home = () => {
                   </div>
                 </Reveal>
               ))}
+        </div>
+      </section>
+
+      {/* SELECTED JUDGMENTS & LEGAL MATTERS */}
+      <section data-testid="judgments-section" className="border-y border-navy/10 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <Reveal>
+            <Overline>Judgments</Overline>
+            <GoldRule className="mt-3 w-16" />
+            <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Selected Judgments &amp; Legal Matters</h2>
+            <p className="mt-4 max-w-3xl text-base leading-relaxed text-charcoal/75">
+              Publicly available judgments and legal matters in which the chambers has been involved. Each entry
+              states the legal issue in neutral terms and links to the public record.
+            </p>
+          </Reveal>
+          <div className="mt-14 border-t border-navy/10">
+            {[1, 2, 3].map((n) => (
+              <Reveal key={n} delay={n * 0.06}>
+                <div
+                  data-testid={`judgment-${n}`}
+                  className="grid grid-cols-1 gap-6 border-b border-navy/10 py-8 transition-colors duration-300 hover:bg-cream/60 lg:grid-cols-12 lg:px-4"
+                >
+                  <div className="lg:col-span-7">
+                    <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
+                      Placeholder — to be updated with a verified judgment
+                    </span>
+                    <h3 className="mt-2 font-serif text-xl text-navy">[Case Title — Party v. Party]</h3>
+                    <p className="mt-2.5 max-w-2xl text-sm leading-relaxed text-charcoal/70">
+                      A brief, neutral description of the legal issue decided in the matter will appear here — the
+                      question of law or subject matter, stated factually and without reference to outcome.
+                    </p>
+                  </div>
+                  <div className="lg:col-span-5">
+                    <dl className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm lg:justify-items-end lg:text-right">
+                      <div>
+                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Court</dt>
+                        <dd className="mt-1 text-charcoal/80">[Court Name]</dd>
+                      </div>
+                      <div>
+                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Year</dt>
+                        <dd className="mt-1 text-charcoal/80">[Year]</dd>
+                      </div>
+                      <div className="col-span-2">
+                        <dt className="text-[10px] font-mono uppercase tracking-[0.2em] text-gold-dark">Case No.</dt>
+                        <dd className="mt-1 text-charcoal/80">[Case Number]</dd>
+                      </div>
+                    </dl>
+                    <p className="mt-4 lg:text-right">
+                      <span
+                        data-testid={`judgment-link-${n}`}
+                        className="inline-flex cursor-not-allowed items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gold-dark/60"
+                        title="Link will be activated with the verified public judgment"
+                      >
+                        View Judgment <ArrowUpRight className="h-3.5 w-3.5" />
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.2}>
+            <p className="mt-8 max-w-3xl text-xs italic leading-relaxed text-charcoal/55">
+              The judgments and legal matters presented are provided for informational purposes. Past case outcomes
+              depend on the facts and circumstances of each matter and do not guarantee similar outcomes in future
+              cases.
+            </p>
+          </Reveal>
         </div>
       </section>
 

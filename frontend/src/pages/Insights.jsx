@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ArrowUpRight, BookOpen } from "lucide-react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowUpRight, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import Seo from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
@@ -23,6 +23,16 @@ const PLANNED_TOPICS = [
 
 const Insights = () => {
   const [articles, setArticles] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const page = Math.max(1, parseInt(searchParams.get("page") || "1", 10) || 1);
+  const PAGE_SIZE = 6;
+  const totalPages = articles ? Math.max(1, Math.ceil(articles.length / PAGE_SIZE)) : 1;
+  const paged = articles ? articles.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE) : [];
+  const goTo = (p) => {
+    const next = Math.min(Math.max(1, p), totalPages);
+    setSearchParams(next === 1 ? {} : { page: String(next) });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     API.get("/articles").then(({ data }) => setArticles(data)).catch(() => setArticles([]));
@@ -48,8 +58,9 @@ const Insights = () => {
         </Reveal>
 
         {articles && articles.length > 0 ? (
+          <>
           <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {articles.map((a, i) => {
+            {paged.map((a, i) => {
               const vis = insightVisual(`${a.title} ${a.excerpt || ""}`);
               return (
                 <Reveal key={a.id} delay={i * 0.06}>
@@ -81,6 +92,44 @@ const Insights = () => {
               );
             })}
           </div>
+          {totalPages > 1 && (
+            <nav data-testid="insights-pagination" aria-label="Articles pagination" className="mt-14 flex flex-wrap items-center justify-center gap-2">
+              <button
+                data-testid="pagination-prev"
+                onClick={() => goTo(page - 1)}
+                disabled={page === 1}
+                aria-label="Previous page"
+                className="flex h-10 w-10 items-center justify-center border border-navy/15 text-navy transition-colors hover:border-gold hover:bg-navy hover:text-ivory disabled:cursor-not-allowed disabled:opacity-35"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              {Array.from({ length: totalPages }, (_, i) => (
+                <button
+                  key={i}
+                  data-testid={`pagination-page-${i + 1}`}
+                  onClick={() => goTo(i + 1)}
+                  aria-current={page === i + 1 ? "page" : undefined}
+                  className={`h-10 w-10 text-sm font-semibold transition-colors ${
+                    page === i + 1
+                      ? "bg-navy text-ivory"
+                      : "border border-navy/15 text-navy hover:border-gold hover:bg-navy hover:text-ivory"
+                  }`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+              <button
+                data-testid="pagination-next"
+                onClick={() => goTo(page + 1)}
+                disabled={page === totalPages}
+                aria-label="Next page"
+                className="flex h-10 w-10 items-center justify-center border border-navy/15 text-navy transition-colors hover:border-gold hover:bg-navy hover:text-ivory disabled:cursor-not-allowed disabled:opacity-35"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </nav>
+          )}
+          </>
         ) : articles && articles.length === 0 ? (
           <Reveal delay={0.1}>
             <div className="mt-14 border border-dashed border-navy/25 bg-cream/60 p-10 lg:p-14" data-testid="insights-empty-state">
