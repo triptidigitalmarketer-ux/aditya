@@ -53,24 +53,21 @@ export const Overline = ({ children, className = "" }) => (
   </p>
 );
 
-export const Marquee = ({ items, dark = false }) => {
-  const row = [...items, ...items, ...items];
-  return (
-    <div
-      data-testid="editorial-marquee"
-      className={`overflow-hidden border-y ${dark ? "border-gold/25 bg-navy-deep" : "border-navy/10 bg-ivory"} py-4 select-none`}
-      aria-hidden="true"
-    >
-      <div className="animate-marquee flex w-max items-center gap-14 pr-14">
-        {[...row, ...row].map((item, i) => (
-          <span key={i} className="flex items-center gap-14">
-            <span className={`text-[11px] font-mono uppercase tracking-[0.35em] ${dark ? "text-ivory/50" : "text-navy/50"}`}>
-              {item}
-            </span>
-            <span className="h-1 w-1 rotate-45 bg-gold" />
+export const Marquee = ({ items, dark = false }) => (
+  <div
+    data-testid="editorial-marquee"
+    className={`overflow-hidden border-y ${dark ? "border-ivory/10" : "border-navy/10 bg-ivory"} py-4 select-none`}
+    aria-hidden="true"
+  >
+    <div className="animate-marquee flex w-max items-center gap-14 pr-14">
+      {[...items, ...items, ...items, ...items].map((item, i) => (
+        <span key={i} className="flex items-center gap-14">
+          <span className={`text-[11px] font-mono uppercase tracking-[0.35em] ${dark ? "text-ivory/50" : "text-navy/50"}`}>
+            {item}
           </span>
-        ))}
-      </div>
+          <span className="h-1 w-1 rotate-45 bg-gold" />
+        </span>
+      ))}
     </div>
-  );
-};
+  </div>
+);

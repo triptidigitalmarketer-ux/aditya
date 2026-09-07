@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin, Phone, Scale, Landmark, Building2, Globe2, ChevronLeft, ChevronRight } from "lucide-react";
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
 import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual, FLAGS } from "@/data/site";
 import { API } from "@/api";
-
-const TRUST_ITEMS = ["Faridabad Chamber", "Delhi NCR", "Pan-India Matters", "High Courts", "Supreme Court"];
 
 const USPS = [
   {
@@ -101,7 +99,8 @@ const Home = () => {
       <Seo
         title="Aditya Gaur & Associates | Lawyer in Faridabad, Delhi NCR & Pan-India"
         siteName="Aditya Gaur & Associates"
-        description="Professional legal representation across Faridabad, Delhi, Noida, Greater Noida, Gurugram and India. District Courts, High Courts & Supreme Court matters. Chamber: District Courts, Sector 12, Faridabad."
+        description="Professional legal representation across Faridabad, Delhi, Noida, Greater Noida, Gurugram and India. District Courts, High Courts & Supreme Court matters. Chamber opposite District & Sessions Court, Faridabad."
+        image="/aditya-gaur-advocate.webp"
         jsonLd={jsonLd}
       />
 
@@ -207,27 +206,33 @@ const Home = () => {
         </div>
       </section>
 
-      {/* TRUST STRIP */}
+      {/* JURISDICTION MARQUEE + QUICK CONTACT BAR — each with its own reserved space in normal flow */}
       <section data-testid="trust-strip" className="bg-navy">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 py-6 sm:px-6 lg:justify-between lg:px-8">
-          {TRUST_ITEMS.map((item, i) => (
-            <Reveal key={item} delay={i * 0.08}>
-              <span className="flex items-center gap-8">
-                <span className="text-[11px] font-mono uppercase tracking-[0.3em] text-ivory/85">{item}</span>
-                {i < TRUST_ITEMS.length - 1 && <span className="hidden h-1 w-1 rotate-45 bg-gold lg:block" />}
-              </span>
-            </Reveal>
-          ))}
-        </div>
-        <div className="border-t border-ivory/10 bg-navy-deep">
-          <p data-testid="chamber-line" className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-3 text-center text-xs text-ivory/60 sm:px-6 lg:px-8">
-            <MapPin className="h-3.5 w-3.5 shrink-0 text-gold" />
-            Chamber: Opposite District &amp; Sessions Court, Faridabad, Haryana – 121002
-          </p>
+        <Marquee items={MARQUEE_ITEMS} dark />
+        <div className="border-t border-ivory/10 bg-navy-deep" data-testid="quick-contact-bar">
+          <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-2 px-4 py-3.5 text-xs sm:px-6 lg:px-8">
+            <span data-testid="chamber-line" className="flex items-center gap-2 text-ivory/70">
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-gold" />
+              Chamber: Opposite District &amp; Sessions Court, Faridabad, Haryana – 121002
+            </span>
+            <a
+              href={SITE.phoneHref}
+              data-testid="quickbar-phone"
+              className="flex items-center gap-2 font-medium text-ivory/85 transition-colors hover:text-gold"
+            >
+              <Phone className="h-3.5 w-3.5 shrink-0 text-gold" />
+              {SITE.phoneDisplay}
+            </a>
+            <Link
+              to="/contact"
+              data-testid="quickbar-consultation-link"
+              className="flex items-center gap-1.5 font-semibold uppercase tracking-wider text-gold transition-colors hover:text-gold-light"
+            >
+              Book a Consultation <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
-
-      <Marquee items={MARQUEE_ITEMS} />
 
       {/* ABOUT PREVIEW */}
       <section data-testid="about-preview" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">

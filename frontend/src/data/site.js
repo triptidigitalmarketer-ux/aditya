@@ -225,17 +225,15 @@ export const FLAGS = {
 };
 
 export const MARQUEE_ITEMS = [
-  "Criminal Defence",
-  "Bail & Anticipatory Bail",
-  "Matrimonial & Family Law",
-  "Property & Civil Disputes",
-  "Cheque Bounce & Recovery",
-  "Corporate & Commercial",
-  "High Courts & Supreme Court",
+  "Faridabad Chamber",
+  "Delhi NCR",
+  "Pan-India Matters",
+  "District Courts",
+  "High Courts",
+  "Supreme Court of India",
 ];
 
-export const PORTRAIT_URL =
-  "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBsYXd5ZXIlMjBzdWl0JTIwb2ZmaWNlJTIwcG9ydHJhaXQlMjBjb25zdWx0YXRpb258ZW58MHx8fHwxNzg4Nzk5MzgzfDA&ixlib=rb-4.1.0&q=85";
+export const PORTRAIT_URL = "/aditya-gaur-advocate.webp";
 
 export const COURT_IMAGE_URL =
   "https://images.pexels.com/photos/6077091/pexels-photo-6077091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";

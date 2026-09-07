@@ -59,6 +59,11 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Duplicate ticker fixed: marquee now scrolls practice-area names; the navy trust strip keeps the location items (no duplicated content).
 - Note: testing_agent tool is not available in this environment; verification was done via automated multi-breakpoint browser checks (opacity sweep + geometry overlap checks + screenshots).
 
+### Update 2026-09-08 — Photo live + final breakpoint sweep
+- Aditya Gaur's real professional photo live: uploaded PNG cropped to 4:5, optimized to WebP (122KB, 960×1200) at /aditya-gaur-advocate.webp; used in hero, About bio, team featured profile, and as the homepage OG share image.
+- Top bars restructured: jurisdiction marquee (top, single deduplicated loop) + quick-contact strip (bottom: chamber address + phone + Book a Consultation link), each with its own reserved height — verified zero overlap.
+- Fade-bug sweep completed at all requested widths (390/768/1024/1290/1440/1920/2560): 0 low-opacity elements in every reported section.
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.
