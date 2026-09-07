@@ -72,7 +72,6 @@ export const PRACTICE_CATEGORIES = [
       { slug: "property-civil-lawyer", label: "Property & Civil Law" },
       { slug: "property-dispute-lawyer", label: "Property Disputes" },
       { slug: "civil-lawyer", label: "Civil Litigation" },
-      { slug: "rera-lawyer", label: "RERA Matters" },
     ],
   },
   {
@@ -96,6 +95,52 @@ export const PRACTICE_CATEGORIES = [
     ],
   },
 ];
+
+// Shown only on the Practice Areas hub page (homepage keeps the six main categories)
+export const RERA_CATEGORY = {
+  id: "rera",
+  title: "RERA & Real Estate",
+  description:
+    "Complaints before the RERA authorities, builder-buyer disputes and real estate litigation across Delhi NCR — delay, refund, interest and compensation claims.",
+  pages: [{ slug: "rera-lawyer", label: "RERA Matters" }],
+};
+
+// Sub-services listed under each category on the hub page. Items marked
+// pending are awaiting confirmation that the service is actually handled.
+export const CATEGORY_SUBS = {
+  criminal: [
+    { label: "Regular Bail", to: "/bail-lawyer" },
+    { label: "FIR & Criminal Complaints", to: "/criminal-law-lawyer" },
+    { label: "Criminal Appeals", to: "/criminal-law-lawyer" },
+  ],
+  family: [
+    { label: "Annulment of Marriage", to: "/divorce-family-lawyer" },
+    { label: "Judicial Separation", to: "/divorce-lawyer" },
+    { label: "498A & Allied Criminal Proceedings", to: "/criminal-law-lawyer" },
+    { label: "NRI Matrimonial Matters", to: "/divorce-family-lawyer", pending: true },
+  ],
+  civil: [
+    { label: "Ancestral Property Disputes", to: "/property-dispute-lawyer" },
+    { label: "Injunction Matters", to: "/civil-lawyer" },
+    { label: "Landlord-Tenant & Eviction Matters", to: "/property-civil-lawyer" },
+    { label: "Recovery Matters", to: "/debt-recovery-lawyer" },
+    { label: "Property Documentation", to: "/property-civil-lawyer" },
+  ],
+  rera: [
+    { label: "Builder-Buyer Disputes", to: "/rera-lawyer" },
+    { label: "Real Estate Disputes", to: "/property-dispute-lawyer" },
+  ],
+  financial: [
+    { label: "Section 138 NI Act", to: "/cheque-bounce-lawyer" },
+    { label: "DRT Matters", to: "/debt-recovery-lawyer", pending: true },
+    { label: "SARFAESI Matters", to: "/debt-recovery-lawyer", pending: true },
+  ],
+  corporate: [
+    { label: "Corporate Advisory", to: "/corporate-commercial-lawyer" },
+    { label: "Business Disputes", to: "/corporate-commercial-lawyer" },
+    { label: "MSME & Business Legal Matters", to: "/corporate-commercial-lawyer" },
+  ],
+};
 
 export const CATEGORY_IMAGES = {
   criminal:

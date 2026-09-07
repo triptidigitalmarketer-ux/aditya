@@ -4,7 +4,7 @@ import Seo from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
-import { PRACTICE_CATEGORIES, CATEGORY_IMAGES } from "@/data/site";
+import { PRACTICE_CATEGORIES, CATEGORY_IMAGES, CATEGORY_SUBS, RERA_CATEGORY } from "@/data/site";
 
 const PracticeHub = () => (
   <div data-testid="practice-hub-page">
@@ -29,7 +29,7 @@ const PracticeHub = () => (
       </Reveal>
 
       <div className="mt-16 space-y-16">
-        {PRACTICE_CATEGORIES.map((cat, i) => (
+        {[...PRACTICE_CATEGORIES, RERA_CATEGORY].map((cat, i) => (
           <Reveal key={cat.id} delay={0.05}>
             <div className="grid grid-cols-1 gap-8 border-t border-navy/10 pt-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
@@ -60,6 +60,33 @@ const PracticeHub = () => (
                     </Link>
                   ))}
                 </div>
+                {CATEGORY_SUBS[cat.id]?.length > 0 && (
+                  <div className="mt-6">
+                    <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">Also Handled</p>
+                    <ul className="mt-3 flex flex-wrap gap-2.5">
+                      {CATEGORY_SUBS[cat.id].map((s) => (
+                        <li key={s.label}>
+                          <Link
+                            to={s.to}
+                            data-testid={`sub-${s.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                            className={`inline-flex items-center gap-1.5 border px-3.5 py-2 text-xs font-medium tracking-wide transition-colors duration-300 ${
+                              s.pending
+                                ? "border-dashed border-navy/25 text-charcoal/55 hover:border-gold/60 hover:text-navy"
+                                : "border-navy/15 text-charcoal/75 hover:border-gold hover:bg-navy hover:text-ivory"
+                            }`}
+                          >
+                            {s.label}
+                            {s.pending && (
+                              <span className="text-[9px] uppercase tracking-wider text-gold-dark">
+                                · confirmation pending
+                              </span>
+                            )}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           </Reveal>

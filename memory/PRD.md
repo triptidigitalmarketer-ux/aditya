@@ -46,6 +46,11 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Dedicated /high-court-lawyer page (single page for the whole cluster — no separate "High Court Advocate" page, per instruction). H1: "High Court Lawyer & Advocate in India". H2s: High Court Legal Representation, High Court Litigation Matters, Types of Matters, How a High Court Engagement Works, FAQ. Keywords (lawyer/advocate/legal services variants) woven naturally; jurisdiction framing kept verified-safe.
 - Homepage Courts & Jurisdiction "High Courts" card now links to /high-court-lawyer with "High Court Legal Services →" CTA; /courts-jurisdiction bottom links include the HC page. Sitemap updated.
 
+### Update 2026-09-07 (night 3) — Hub sub-services
+- Practice Areas hub now lists detailed sub-services as chips under each category ("Also Handled"), linking to the closest existing page — no new thin pages, no cannibalization. Added: Regular Bail, FIR & Criminal Complaints, Criminal Appeals (criminal); Annulment, Judicial Separation, 498A & Allied (family); Ancestral Property, Injunctions, Landlord-Tenant, Recovery, Property Documentation (civil); Section 138 NI Act (financial); Corporate Advisory, Business Disputes, MSME (corporate).
+- New hub-only group "RERA & Real Estate" (RERA Matters + Builder-Buyer Disputes + Real Estate Disputes) — homepage still shows the six main categories only.
+- UNVERIFIED services shown as dashed "confirmation pending" placeholders, not published as fact: NRI Matrimonial Matters, DRT Matters, SARFAESI Matters — flip `pending: false` in site.js CATEGORY_SUBS once Aditya confirms.
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.
