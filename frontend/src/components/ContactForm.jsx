@@ -65,12 +65,12 @@ const ContactForm = ({ compact = false }) => {
     <form data-testid="contact-form" onSubmit={submit} className={compact ? "space-y-4" : "space-y-5"}>
       <div className={`grid grid-cols-1 gap-4 ${compact ? "" : "sm:grid-cols-2"}`}>
         <input data-testid="contact-name-input" required minLength={2} placeholder="Full Name" value={form.name} onChange={set("name")} className={inputCls} />
-        <input data-testid="contact-phone-input" required minLength={6} placeholder="Phone / WhatsApp" value={form.phone} onChange={set("phone")} className={inputCls} />
+        <input data-testid="contact-phone-input" required minLength={6} placeholder="Phone Number" value={form.phone} onChange={set("phone")} className={inputCls} />
       </div>
       <div className={`grid grid-cols-1 gap-4 ${compact ? "" : "sm:grid-cols-2"}`}>
         <input data-testid="contact-email-input" required type="email" placeholder="Email Address" value={form.email} onChange={set("email")} className={inputCls} />
         <select data-testid="contact-matter-select" required value={form.matter} onChange={set("matter")} className={inputCls}>
-          <option value="" disabled>Select Legal Matter</option>
+          <option value="" disabled>Legal Matter / Practice Area</option>
           {MATTERS.map((m) => (
             <option key={m} value={m}>{m}</option>
           ))}
@@ -81,7 +81,7 @@ const ContactForm = ({ compact = false }) => {
         required
         minLength={5}
         rows={compact ? 3 : 5}
-        placeholder="Briefly describe your matter (do not share confidential details here)"
+        placeholder="Brief Description of the Matter"
         value={form.message}
         onChange={set("message")}
         className={inputCls}
@@ -93,7 +93,7 @@ const ContactForm = ({ compact = false }) => {
         className="inline-flex items-center gap-2 bg-navy px-7 py-3.5 text-sm font-medium uppercase tracking-wider text-ivory shadow-md transition-all duration-300 hover:bg-navy-light active:scale-95 disabled:opacity-60"
       >
         {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-        {loading ? "Sending…" : "Request Consultation"}
+        {loading ? "Sending…" : "Submit Enquiry"}
       </button>
     </form>
   );

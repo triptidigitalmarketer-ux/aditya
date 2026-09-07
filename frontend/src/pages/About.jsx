@@ -47,7 +47,7 @@ const About = () => (
             <GoldRule className="mt-3 w-16" />
             <h1 className="mt-5 font-serif text-4xl text-navy sm:text-5xl">About Aditya Gaur</h1>
             <p className="mt-7 max-w-3xl text-lg font-light leading-relaxed text-charcoal/85">
-              Aditya Gaur is an advocate with a chamber at the District Courts complex, Sector 12, Faridabad, and a
+              Aditya Gaur is an advocate with a chamber opposite the District &amp; Sessions Court, Faridabad, and a
               practice that extends across Delhi, Noida, Greater Noida, Gurugram and the wider National Capital
               Region — and, depending on the nature and jurisdiction of the matter, across India.
             </p>

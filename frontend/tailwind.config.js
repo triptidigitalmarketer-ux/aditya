@@ -14,8 +14,8 @@ module.exports = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             fontFamily: {
-                serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
-                sans: ['Inter', '"Source Sans 3"', 'system-ui', 'sans-serif'],
+                serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                sans: ['Roboto', 'system-ui', 'sans-serif'],
                 mono: ['"JetBrains Mono"', 'Menlo', 'monospace'],
             },
             colors: {

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2, MessagesSquare } from "lucide-react";
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
@@ -9,6 +9,29 @@ import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL } fro
 import { API } from "@/api";
 
 const TRUST_ITEMS = ["Faridabad Chamber", "Delhi NCR", "Pan-India Matters", "High Courts", "Supreme Court"];
+
+const USPS = [
+  {
+    icon: MapPin,
+    title: "Delhi NCR Coverage",
+    text: "Matters handled across Delhi, Faridabad, Noida, Greater Noida and Gurugram.",
+  },
+  {
+    icon: Landmark,
+    title: "Court Representation",
+    text: "Matters relating to District Courts, High Courts and the Supreme Court of India.",
+  },
+  {
+    icon: Globe2,
+    title: "Pan-India Matters",
+    text: "Legal matters handled across jurisdictions in India, subject to the nature and jurisdiction of the case.",
+  },
+  {
+    icon: MessagesSquare,
+    title: "Client-Focused Approach",
+    text: "Clear communication, case assessment and practical legal guidance.",
+  },
+];
 
 const CHAPTERS = [
   {
@@ -58,7 +81,7 @@ const Home = () => {
       "Professional legal representation across Faridabad, Delhi NCR and India — criminal defence, matrimonial, property, financial and commercial matters.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "District Courts, Sector 12",
+      streetAddress: "Opposite District & Sessions Court",
       addressLocality: "Faridabad",
       addressRegion: "Haryana",
       addressCountry: "IN",
@@ -143,10 +166,34 @@ const Home = () => {
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/80 to-transparent p-5">
                   <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-gold">Chamber</p>
-                  <p className="mt-1 text-sm text-ivory">District Courts, Sector 12, Faridabad</p>
+                  <p className="mt-1 text-sm text-ivory">Opposite District &amp; Sessions Court, Faridabad</p>
                 </div>
               </motion.div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* USP — WHY ADITYA GAUR */}
+      <section data-testid="usp-section" className="border-b border-navy/10 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+          <Reveal>
+            <Overline>Why Aditya Gaur</Overline>
+            <GoldRule className="mt-3 w-16" />
+          </Reveal>
+          <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {USPS.map((u, i) => (
+              <Reveal key={u.title} delay={i * 0.08}>
+                <div
+                  data-testid={`usp-${i + 1}`}
+                  className="border-l border-navy/10 pl-6 transition-colors duration-300 hover:border-gold"
+                >
+                  <u.icon className="h-5 w-5 text-gold-dark" strokeWidth={1.5} />
+                  <h2 className="mt-4 font-serif text-xl text-navy">{u.title}</h2>
+                  <p className="mt-2.5 text-sm leading-relaxed text-charcoal/70">{u.text}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -166,7 +213,7 @@ const Home = () => {
         <div className="border-t border-ivory/10 bg-navy-deep">
           <p data-testid="chamber-line" className="mx-auto flex max-w-7xl items-center justify-center gap-2 px-4 py-3 text-center text-xs text-ivory/60 sm:px-6 lg:px-8">
             <MapPin className="h-3.5 w-3.5 shrink-0 text-gold" />
-            Chamber: District Courts, Sector 12, Faridabad, Haryana
+            Chamber: Opposite District &amp; Sessions Court, Faridabad, Haryana – 121002
           </p>
         </div>
       </section>
@@ -188,9 +235,10 @@ const Home = () => {
           <div className="lg:col-span-8">
             <Reveal delay={0.15}>
               <p className="text-lg font-light leading-relaxed text-charcoal/85">
-                Aditya Gaur is an advocate practising from the District Courts complex at Sector 12, Faridabad, with a
-                practice that extends across Delhi NCR and, depending on the nature and jurisdiction of the matter,
-                across India. The work spans criminal defence, matrimonial and family law, property and civil
+                Aditya Gaur is an advocate practising from his chamber opposite the District &amp; Sessions Court,
+                Faridabad, with a practice that extends across Delhi, Noida, Greater Noida, Gurugram and the wider
+                National Capital Region — and, depending on the nature and jurisdiction of the matter, across India.
+                The work spans criminal defence, matrimonial and family law, property and civil
                 disputes, cheque bounce and debt recovery, and corporate-commercial matters.
               </p>
               <p className="mt-5 text-lg font-light leading-relaxed text-charcoal/85">

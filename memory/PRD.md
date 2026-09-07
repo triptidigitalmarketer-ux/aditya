@@ -33,7 +33,8 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 
 ## Pending / Blockers
 - RESEND_API_KEY not set → enquiry email notifications skipped (dashboard works regardless). Need Resend key + verified sender + recipient email.
-- Placeholder phone/WhatsApp/email/social links (user to supply verified details).
+- Verified contact details now live sitewide (2026-09-07): Chamber — Opposite District & Sessions Court, Faridabad, Haryana – 121002; Emergency Contact — +91 95828 85482; Email — contact@adityagaurassociates.com; Office hours — Mon–Sat 10:00 AM–7:00 PM. Social links remain placeholders.
+- Typography switched to Playfair Display (headings) + Roboto (body) per user direction; "Why Aditya Gaur" 4-USP section added below hero; Contact page rebuilt to two-column spec (Schedule a Consultation form left, contact details right with gold-accented Emergency Contact).
 - Placeholder portrait photo (user to upload real one).
 - Keyword Excel file was referenced but not actually attached — SEO mapping built from the brief.
 - Google Search Console / Analytics not connected (awaiting credentials).

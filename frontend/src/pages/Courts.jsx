@@ -11,7 +11,7 @@ const CHAPTERS = [
     num: "01",
     title: "District Courts",
     body: [
-      "The foundation of the practice is trial-level litigation before the District Courts — with the chamber located within the District Courts complex at Sector 12, Faridabad, and matters handled before district courts across Delhi NCR, including the Delhi court complexes, Gurugram, and Surajpur (Greater Noida), as the jurisdiction of each matter requires.",
+      "The foundation of the practice is trial-level litigation before the District Courts — with the chamber located opposite the District & Sessions Court, Faridabad, and matters handled before district courts across Delhi NCR, including the Delhi court complexes, Gurugram, and Surajpur (Greater Noida), as the jurisdiction of each matter requires.",
       "District Courts hear the bulk of Indian litigation: criminal trials and bail, matrimonial and family matters, civil suits for property, recovery and injunctions, and proceedings under special statutes. Effective trial work — the pleadings, the evidence, the cross-examination — is where most cases are truly decided.",
     ],
   },

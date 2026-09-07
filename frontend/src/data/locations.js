@@ -7,9 +7,9 @@ export const LOCATION_PAGES = [
     metaDescription:
       "Advocate in Faridabad with chamber at District Courts, Sector 12. Criminal defence, divorce & family law, property disputes, cheque bounce and civil litigation in Faridabad.",
     intro:
-      "Faridabad is home ground. The chamber is located at District Courts, Sector 12, Faridabad — within the court complex where the district's civil, criminal, matrimonial and consumer matters are heard. Clients in Faridabad have direct, walk-in access to counsel who is present where their case is decided.",
+      "Faridabad is home ground. The chamber is located opposite the District & Sessions Court, Faridabad — steps from the court complex where the district's civil, criminal, matrimonial and consumer matters are heard. Clients in Faridabad have direct access to counsel who is present where their case is decided.",
     presence: [
-      "The District and Sessions Court complex at Sector 12 is the centre of litigation in Faridabad — the Family Court, the Motor Accident Claims Tribunal, the Consumer Commission and the criminal courts all sit here. A chamber inside the complex means filings, appearances and urgent applications happen without the friction of distance.",
+      "The District and Sessions Court complex at Sector 12 is the centre of litigation in Faridabad — the Family Court, the Motor Accident Claims Tribunal, the Consumer Commission and the criminal courts all sit here. A chamber opposite the complex means filings, appearances and urgent applications happen without the friction of distance.",
       "Faridabad's docket reflects its character: a large industrial and trading base producing commercial and recovery disputes; rapid residential growth producing property, RERA and landlord-tenant matters; and the full range of criminal and matrimonial litigation of a major NCR district.",
     ],
     courts: [
@@ -23,7 +23,7 @@ export const LOCATION_PAGES = [
     faqs: [
       {
         q: "Where exactly is the chamber in Faridabad?",
-        a: "The chamber is located at District Courts, Sector 12, Faridabad, Haryana — within the district court complex. Consultations are by prior appointment so that time is reserved for your matter; call, WhatsApp or use the enquiry form to schedule.",
+        a: "The chamber is located opposite the District & Sessions Court, Faridabad, Haryana – 121002. Consultations are by prior appointment so that time is reserved for your matter; call, WhatsApp or use the enquiry form to schedule.",
       },
       {
         q: "Do you appear in the Faridabad Family Court?",

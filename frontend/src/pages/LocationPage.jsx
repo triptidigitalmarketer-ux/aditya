@@ -22,7 +22,7 @@ const LocationPage = ({ slug }) => {
       description: page.metaDescription,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "District Courts, Sector 12",
+        streetAddress: "Opposite District & Sessions Court",
         addressLocality: "Faridabad",
         addressRegion: "Haryana",
         addressCountry: "IN",
