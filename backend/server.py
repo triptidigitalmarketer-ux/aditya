@@ -107,6 +107,7 @@ class ArticleIn(BaseModel):
     excerpt: str = ""
     content: str = ""
     meta_description: str = ""
+    image: str = ""
     status: str = "draft"
 
 

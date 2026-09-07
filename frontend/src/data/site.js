@@ -112,6 +112,45 @@ export const CATEGORY_IMAGES = {
     "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
 };
 
+export const INSIGHT_IMAGES = {
+  criminal:
+    "https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=800&q=75&fm=webp",
+  family:
+    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=75&fm=webp",
+  property:
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=75&fm=webp",
+  financial:
+    "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=800&q=75&fm=webp",
+  corporate:
+    "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=75&fm=webp",
+  court:
+    "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=75&fm=webp",
+  default:
+    "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=75&fm=webp",
+};
+
+const INSIGHT_TOPICS = [
+  { keys: ["bail", "anticipatory"], img: "criminal", label: "Criminal Law" },
+  { keys: ["divorce", "matrimonial", "custody", "maintenance", "alimony", "family"], img: "family", label: "Matrimonial & Family Law" },
+  { keys: ["rera", "property", "builder", "real estate", "ancestral"], img: "property", label: "Property & RERA" },
+  { keys: ["cheque", "138", "recovery", "debt", "drt", "sarfaesi"], img: "financial", label: "Financial Disputes" },
+  { keys: ["corporate", "contract", "msme", "business", "commercial", "agreement"], img: "corporate", label: "Corporate & Commercial" },
+  { keys: ["supreme court", "slp", "high court", "appeal", "quashing", "fir"], img: "court", label: "Courts & Procedure" },
+  { keys: ["criminal", "cyber"], img: "criminal", label: "Criminal Law" },
+];
+
+export const insightVisual = (text) => {
+  const t = (text || "").toLowerCase();
+  const hit = INSIGHT_TOPICS.find((topic) => topic.keys.some((k) => t.includes(k)));
+  const key = hit ? hit.img : "default";
+  const label = hit ? hit.label : "Legal Insight";
+  return {
+    img: INSIGHT_IMAGES[key],
+    label,
+    alt: (title) => `${label} article — ${title}`,
+  };
+};
+
 export const LOCATIONS = [
   { slug: "advocate-faridabad", label: "Faridabad", primary: true },
   { slug: "advocate-delhi", label: "Delhi" },

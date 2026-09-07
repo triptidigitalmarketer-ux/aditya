@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2 } 
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
-import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES } from "@/data/site";
+import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual } from "@/data/site";
 import { API } from "@/api";
 
 const TRUST_ITEMS = ["Faridabad Chamber", "Delhi NCR", "Pan-India Matters", "High Courts", "Supreme Court"];
@@ -485,26 +485,130 @@ const Home = () => {
         </Reveal>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
           {articles.length > 0
-            ? articles.map((a, i) => (
-                <Reveal key={a.id} delay={i * 0.08}>
-                  <Link to={`/legal-insights/${a.slug}`} data-testid={`insight-card-${a.slug}`} className="group block h-full border border-navy/10 bg-cream p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                    <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
-                      {new Date(a.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
-                    </p>
-                    <h3 className="mt-3 font-serif text-xl text-navy transition-colors group-hover:text-navy-light">{a.title}</h3>
-                    <p className="mt-3 text-sm leading-relaxed text-charcoal/70">{a.excerpt}</p>
-                  </Link>
-                </Reveal>
-              ))
-            : ["What Is Anticipatory Bail?", "Mutual Consent Divorce Procedure in India", "What to Do After a Cheque Bounce Notice"].map((t, i) => (
-                <Reveal key={t} delay={i * 0.08}>
-                  <div className="h-full border border-dashed border-navy/20 bg-cream/50 p-8">
-                    <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">Forthcoming</p>
-                    <h3 className="mt-3 font-serif text-xl text-navy/70">{t}</h3>
-                    <p className="mt-3 text-sm text-charcoal/50">In preparation — check back soon.</p>
+            ? articles.map((a, i) => {
+                const vis = insightVisual(`${a.title} ${a.excerpt || ""}`);
+                return (
+                  <Reveal key={a.id} delay={i * 0.08}>
+                    <Link
+                      to={`/legal-insights/${a.slug}`}
+                      data-testid={`insight-card-${a.slug}`}
+                      className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-cream transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-xl"
+                    >
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img
+                          src={a.image || vis.img}
+                          alt={vis.alt(a.title)}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="flex flex-1 flex-col p-7">
+                        <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">{vis.label}</p>
+                        <h3 className="mt-3 font-serif text-xl leading-snug text-navy transition-colors group-hover:text-navy-light">
+                          {a.title}
+                        </h3>
+                        <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/70">{a.excerpt}</p>
+                        <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-navy">
+                          Read Article <ArrowUpRight className="h-3.5 w-3.5 text-gold-dark" />
+                        </span>
+                      </div>
+                    </Link>
+                  </Reveal>
+                );
+              })
+            : [
+                {
+                  title: "What Is Anticipatory Bail?",
+                  label: "Criminal Law",
+                  img: INSIGHT_IMAGES.criminal,
+                  alt: "Courtroom interior relating to anticipatory bail in criminal matters",
+                },
+                {
+                  title: "Mutual Consent Divorce Procedure in India",
+                  label: "Matrimonial & Family Law",
+                  img: INSIGHT_IMAGES.family,
+                  alt: "Signing legal documents in a mutual consent divorce matter",
+                },
+                {
+                  title: "What to Do After a Cheque Bounce Notice",
+                  label: "Financial Disputes",
+                  img: INSIGHT_IMAGES.financial,
+                  alt: "Financial documents relating to a cheque bounce notice under Section 138 NI Act",
+                },
+              ].map((f, i) => (
+                <Reveal key={f.title} delay={i * 0.08}>
+                  <div className="h-full overflow-hidden border border-dashed border-navy/20 bg-cream/50">
+                    <div className="aspect-[16/9] overflow-hidden opacity-70">
+                      <img src={f.img} alt={f.alt} loading="lazy" className="h-full w-full object-cover" />
+                    </div>
+                    <div className="p-7">
+                      <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
+                        Forthcoming — {f.label}
+                      </p>
+                      <h3 className="mt-3 font-serif text-xl text-navy/70">{f.title}</h3>
+                      <p className="mt-3 text-sm text-charcoal/50">In preparation — check back soon.</p>
+                    </div>
                   </div>
                 </Reveal>
               ))}
+        </div>
+      </section>
+
+      {/* CLIENT TESTIMONIALS */}
+      <section data-testid="testimonials-section" className="bg-navy grain relative">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <Reveal>
+            <Overline className="text-gold">Client Testimonials</Overline>
+            <GoldRule className="mt-3 w-16" />
+            <h2 className="mt-5 font-serif text-3xl text-ivory sm:text-4xl">What Our Clients Say</h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/70">
+              Client experiences and feedback reflect the professional approach to handling legal matters.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {[
+              {
+                text: "This space is reserved for a genuine client testimonial. Feedback from a real client engagement will be published here with the client's consent.",
+                name: "Client Name",
+                matter: "Practice Area",
+              },
+              {
+                text: "This space is reserved for a genuine client testimonial. Only verified feedback from actual matters will be featured here.",
+                name: "Client Name",
+                matter: "Practice Area",
+              },
+              {
+                text: "This space is reserved for a genuine client testimonial. Feedback is published as received — never edited, never invented.",
+                name: "Client Name",
+                matter: "Practice Area",
+              },
+            ].map((t, i) => (
+              <Reveal key={i} delay={i * 0.08}>
+                <figure
+                  data-testid={`testimonial-${i + 1}`}
+                  className="flex h-full flex-col border border-ivory/15 bg-navy-light/60 p-8 transition-colors duration-300 hover:border-gold/40"
+                >
+                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold/70">
+                    Placeholder — awaiting genuine client feedback
+                  </span>
+                  <blockquote className="mt-5 flex-1 text-base italic leading-relaxed text-ivory/85">
+                    &ldquo;{t.text}&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-6 border-t border-ivory/10 pt-4">
+                    <p className="font-semibold text-ivory">{t.name}</p>
+                    <p className="mt-1 text-xs uppercase tracking-wider text-ivory/50">{t.matter}</p>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={0.2}>
+            <p className="mt-10 max-w-2xl text-xs italic leading-relaxed text-ivory/45">
+              Testimonials are published only from genuine client feedback, received with the client's consent. The
+              cards above are placeholders and will be replaced as verified reviews are received. No ratings or
+              outcomes are displayed unless they come from an actual client review.
+            </p>
+          </Reveal>
         </div>
       </section>
 

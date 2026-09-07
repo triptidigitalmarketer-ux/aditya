@@ -7,6 +7,7 @@ import { Reveal, Overline, GoldRule } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
 import NotFound from "@/pages/NotFound";
 import { API } from "@/api";
+import { insightVisual } from "@/data/site";
 
 const ArticlePage = () => {
   const { slug } = useParams();
@@ -66,6 +67,13 @@ const ArticlePage = () => {
               {article.excerpt}
             </p>
           )}
+          <img
+            src={article.image || insightVisual(`${article.title} ${article.excerpt || ""}`).img}
+            alt={insightVisual(`${article.title} ${article.excerpt || ""}`).alt(article.title)}
+            data-testid="article-image"
+            loading="lazy"
+            className="mt-10 aspect-[16/8] w-full border border-navy/10 object-cover"
+          />
         </Reveal>
         <Reveal delay={0.1}>
           <div

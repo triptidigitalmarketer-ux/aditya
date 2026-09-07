@@ -32,6 +32,10 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Contact: "Sunday · Emergency Only" replaced by "Emergency Legal Assistance — Available Anytime" with the emergency number directly below (merged into one gold-accented block, no duplicate numbers).
 - TYPOGRAPHY: Roboto only, site-wide — via Roboto Flex (variable Roboto, supports exact 800/700/600). Global unlayered CSS in index.css enforces H1 800 / H2 700 / H3-4 600 / body 400 / nav+labels 500 / buttons-CTA 600. Playfair Display & JetBrains Mono fully removed. Hero "& India" no longer italic. Practice category images added (home bento + hub) inspired by reference-site pattern.
 
+### Update 2026-09-07 (evening) — Testimonials + Insights images
+- Homepage "What Our Clients Say" testimonials section (before final CTA) with 3 clearly-marked PLACEHOLDER cards — no fake names/ratings/results; replaced when genuine consented feedback is supplied.
+- Legal Insights cards (home + /legal-insights + article pages) now have topic-specific images via keyword-inference helper `insightVisual()` in site.js (criminal/family/property/financial/corporate/court), WebP + lazy loading + descriptive alt text + consistent 16:9. Articles support an optional admin-set image URL (ArticleIn.image); topic image used as fallback.
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.

@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
 import { API } from "@/api";
+import { insightVisual } from "@/data/site";
 
 const PLANNED_TOPICS = [
   "What Is Anticipatory Bail? — and how it differs from regular bail",
@@ -48,26 +49,37 @@ const Insights = () => {
 
         {articles && articles.length > 0 ? (
           <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {articles.map((a, i) => (
-              <Reveal key={a.id} delay={i * 0.06}>
-                <Link
-                  to={`/legal-insights/${a.slug}`}
-                  data-testid={`insight-card-${a.slug}`}
-                  className="group flex h-full flex-col border border-navy/10 bg-cream p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-xl"
-                >
-                  <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
-                    {new Date(a.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })}
-                  </p>
-                  <h2 className="mt-3 font-serif text-xl leading-snug text-navy transition-colors group-hover:text-navy-light">
-                    {a.title}
-                  </h2>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/70">{a.excerpt}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-navy">
-                    Read <ArrowUpRight className="h-3.5 w-3.5 text-gold-dark" />
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
+            {articles.map((a, i) => {
+              const vis = insightVisual(`${a.title} ${a.excerpt || ""}`);
+              return (
+                <Reveal key={a.id} delay={i * 0.06}>
+                  <Link
+                    to={`/legal-insights/${a.slug}`}
+                    data-testid={`insight-card-${a.slug}`}
+                    className="group flex h-full flex-col overflow-hidden border border-navy/10 bg-cream transition-all duration-300 hover:-translate-y-1 hover:border-gold/50 hover:shadow-xl"
+                  >
+                    <div className="aspect-[16/9] overflow-hidden">
+                      <img
+                        src={a.image || vis.img}
+                        alt={vis.alt(a.title)}
+                        loading="lazy"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-7">
+                      <p className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">{vis.label}</p>
+                      <h2 className="mt-3 font-serif text-xl leading-snug text-navy transition-colors group-hover:text-navy-light">
+                        {a.title}
+                      </h2>
+                      <p className="mt-3 flex-1 text-sm leading-relaxed text-charcoal/70">{a.excerpt}</p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-navy">
+                        Read Article <ArrowUpRight className="h-3.5 w-3.5 text-gold-dark" />
+                      </span>
+                    </div>
+                  </Link>
+                </Reveal>
+              );
+            })}
           </div>
         ) : articles && articles.length === 0 ? (
           <Reveal delay={0.1}>

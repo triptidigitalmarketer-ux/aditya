@@ -260,6 +260,7 @@ const ArticleForm = ({ initial, onSave, onCancel }) => {
         <input data-testid="article-slug-input" placeholder="URL slug (auto if blank)" value={form.slug} onChange={set("slug")} className={inputCls} />
       </div>
       <textarea data-testid="article-excerpt-input" rows={2} placeholder="Excerpt — one or two sentences shown in listings" value={form.excerpt} onChange={set("excerpt")} className={`${inputCls} mt-4`} />
+      <input data-testid="article-image-input" placeholder="Image URL (optional — a relevant topic image is used automatically if blank)" value={form.image || ""} onChange={set("image")} className={`${inputCls} mt-4`} />
       <textarea
         data-testid="article-content-input"
         rows={14}
