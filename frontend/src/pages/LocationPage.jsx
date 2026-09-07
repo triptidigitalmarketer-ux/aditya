@@ -18,7 +18,7 @@ const LocationPage = ({ slug }) => {
     {
       "@context": "https://schema.org",
       "@type": "LegalService",
-      name: `Aditya Gaur, Advocate — ${page.city}`,
+      name: `Aditya Gaur & Associates — ${page.city}`,
       description: page.metaDescription,
       address: {
         "@type": "PostalAddress",
@@ -42,7 +42,7 @@ const LocationPage = ({ slug }) => {
 
   return (
     <div data-testid={`location-page-${slug}`}>
-      <Seo title={page.seoTitle} siteName="Aditya Gaur, Advocate" description={page.metaDescription} jsonLd={jsonLd} />
+      <Seo title={page.seoTitle} siteName="Aditya Gaur & Associates" description={page.metaDescription} jsonLd={jsonLd} />
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <Breadcrumbs trail={[{ label: "Home", to: "/" }, { label: "Locations" }, { label: page.city }]} />

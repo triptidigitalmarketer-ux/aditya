@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://gaur-legal-services.preview.emergentagent.com/sitemap.xml
+Sitemap: https://adityagaurassociates.in/sitemap.xml

@@ -14,9 +14,9 @@ module.exports = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             fontFamily: {
-                serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                sans: ['Roboto', 'system-ui', 'sans-serif'],
-                mono: ['"JetBrains Mono"', 'Menlo', 'monospace'],
+                serif: ['"Roboto Flex"', 'Roboto', 'system-ui', 'sans-serif'],
+                sans: ['"Roboto Flex"', 'Roboto', 'system-ui', 'sans-serif'],
+                mono: ['"Roboto Flex"', 'Roboto', 'system-ui', 'sans-serif'],
             },
             colors: {
                 navy: { DEFAULT: '#0B1F33', light: '#163A59', deep: '#081627' },

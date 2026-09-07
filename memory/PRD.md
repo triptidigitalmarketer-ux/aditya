@@ -25,6 +25,13 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Admin dashboard at /admin (login: admin@adityagauradvocate.in) — enquiries inbox with status management, article editor (draft/publish).
 - Verified: admin login + cookie session, enquiry submit → admin list → status update, article publish → public listing/detail, unauthenticated /admin APIs return 401, all major pages render.
 
+### Update 2026-09-07 (later) — Rebrand, Team, Typography
+- Rebrand to "Aditya Gaur & Associates" sitewide (brand lockup, SEO titles, siteName, schema, footer, llms.txt, admin header). Domain adityagaurassociates.in: sitemap.xml + robots.txt now point to it; backend CORS allows it (domain mapping at deployment still pending).
+- Homepage hero H1 is now a real <h1> (MaskedLines el prop).
+- About page: "Our Team" section added — Founder card (Aditya Gaur) + Associates & Assisting Counsel card (profiles published when announced; no invented team members).
+- Contact: "Sunday · Emergency Only" replaced by "Emergency Legal Assistance — Available Anytime" with the emergency number directly below (merged into one gold-accented block, no duplicate numbers).
+- TYPOGRAPHY: Roboto only, site-wide — via Roboto Flex (variable Roboto, supports exact 800/700/600). Global unlayered CSS in index.css enforces H1 800 / H2 700 / H3-4 600 / body 400 / nav+labels 500 / buttons-CTA 600. Playfair Display & JetBrains Mono fully removed. Hero "& India" no longer italic. Practice category images added (home bento + hub) inspired by reference-site pattern.
+
 ### Update 2026-09-07 — Supreme Court Criminal Law topical cluster
 - New pillar page /supreme-court-criminal-lawyer (primary keyword "Supreme Court Criminal Lawyer"; natural coverage of criminal advocate/SC defence clusters).
 - Supporting pages: /supreme-court-bail-lawyer (bail cluster incl. anticipatory/interim/cancellation), /supreme-court-criminal-appeal-lawyer (appeals cluster), /supreme-court-criminal-slp-lawyer (Article 136 SLP cluster). Each targets a distinct search intent — no cannibalization.

@@ -47,8 +47,8 @@ const ArticlePage = () => {
   return (
     <div data-testid="article-page">
       <Seo
-        title={`${article.title} | Legal Insights — Aditya Gaur, Advocate`}
-        siteName="Aditya Gaur, Advocate"
+        title={`${article.title} | Legal Insights — Aditya Gaur & Associates`}
+        siteName="Aditya Gaur & Associates"
         description={article.meta_description || article.excerpt}
         type="article"
         jsonLd={jsonLd}

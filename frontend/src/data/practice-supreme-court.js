@@ -2,7 +2,7 @@ export const SUPREME_COURT_PAGES = [
   {
     slug: "supreme-court-criminal-lawyer",
     category: "Supreme Court Criminal Practice",
-    seoTitle: "Supreme Court Criminal Lawyer | Criminal Advocate in Supreme Court — Aditya Gaur",
+    seoTitle: "Supreme Court Criminal Lawyer | Criminal Advocate in Supreme Court — Aditya Gaur & Associates",
     h1: "Supreme Court Criminal Lawyer",
     metaDescription:
       "Supreme Court criminal lawyer for criminal SLPs, appeals, bail and anticipatory bail, and challenges to High Court orders. Structured, honest Supreme Court criminal practice.",
@@ -78,7 +78,7 @@ export const SUPREME_COURT_PAGES = [
   {
     slug: "supreme-court-bail-lawyer",
     category: "Supreme Court Criminal Practice",
-    seoTitle: "Supreme Court Bail Lawyer | Bail & Anticipatory Bail in Supreme Court — Aditya Gaur",
+    seoTitle: "Supreme Court Bail Lawyer | Bail & Anticipatory Bail in Supreme Court — Aditya Gaur & Associates",
     h1: "Supreme Court Bail Lawyer",
     metaDescription:
       "Supreme Court bail lawyer for bail after High Court refusal — bail SLPs, anticipatory bail, interim bail and defence of bail cancellation. Prompt, record-driven Supreme Court bail practice.",
@@ -135,7 +135,7 @@ export const SUPREME_COURT_PAGES = [
   {
     slug: "supreme-court-criminal-appeal-lawyer",
     category: "Supreme Court Criminal Practice",
-    seoTitle: "Supreme Court Criminal Appeal Lawyer | Criminal Appeals — Aditya Gaur, Advocate",
+    seoTitle: "Supreme Court Criminal Appeal Lawyer | Criminal Appeals — Aditya Gaur & Associates",
     h1: "Supreme Court Criminal Appeal Lawyer",
     metaDescription:
       "Supreme Court criminal appeal lawyer — appeals against conviction and acquittal, suspension of sentence, and SLP-converted criminal appeals before the Supreme Court of India.",
@@ -192,7 +192,7 @@ export const SUPREME_COURT_PAGES = [
   {
     slug: "supreme-court-criminal-slp-lawyer",
     category: "Supreme Court Criminal Practice",
-    seoTitle: "Supreme Court SLP Criminal Lawyer | Special Leave Petition Criminal — Aditya Gaur",
+    seoTitle: "Supreme Court SLP Criminal Lawyer | Special Leave Petition Criminal — Aditya Gaur & Associates",
     h1: "Criminal SLP Lawyer — Special Leave Petitions in Criminal Matters",
     metaDescription:
       "Criminal SLP lawyer for Special Leave Petitions before the Supreme Court — admission-stage strategy, limitation, grounds that earn leave, and caveats for respondents.",

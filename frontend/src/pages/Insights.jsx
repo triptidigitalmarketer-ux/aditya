@@ -30,8 +30,8 @@ const Insights = () => {
   return (
     <div data-testid="insights-page">
       <Seo
-        title="Legal Insights | Articles on Indian Law — Aditya Gaur, Advocate"
-        siteName="Aditya Gaur, Advocate"
+        title="Legal Insights | Articles on Indian Law — Aditya Gaur & Associates"
+        siteName="Aditya Gaur & Associates"
         description="Clear, responsible articles on Indian legal procedure — bail, divorce, property disputes, cheque bounce, RERA and more. Written for clients, not for search engines."
       />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">

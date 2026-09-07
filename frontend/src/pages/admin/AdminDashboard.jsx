@@ -94,7 +94,7 @@ const AdminDashboard = () => {
       <header className="border-b border-navy/10 bg-navy">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <div className="flex items-center gap-4">
-            <span className="font-serif text-lg text-ivory">Aditya Gaur — Chamber Dashboard</span>
+            <span className="font-serif text-lg text-ivory">Aditya Gaur &amp; Associates — Chamber Dashboard</span>
           </div>
           <div className="flex items-center gap-4">
             <span className="hidden text-xs text-ivory/50 sm:block" data-testid="admin-user-email">{user?.email}</span>

@@ -12,22 +12,25 @@ export const Reveal = ({ children, delay = 0, className = "", y = 28 }) => (
   </motion.div>
 );
 
-export const MaskedLines = ({ lines, className = "", lineClassName = "", baseDelay = 0.15 }) => (
-  <div className={className}>
-    {lines.map((line, i) => (
-      <span key={i} className="mask-line">
-        <motion.span
-          className={`block ${lineClassName} ${line.className || ""}`}
-          initial={{ y: "110%" }}
-          animate={{ y: "0%" }}
-          transition={{ duration: 0.9, delay: baseDelay + i * 0.13, ease: [0.22, 1, 0.36, 1] }}
-        >
-          {line.text}
-        </motion.span>
-      </span>
-    ))}
-  </div>
-);
+export const MaskedLines = ({ lines, className = "", lineClassName = "", baseDelay = 0.15, el = "div" }) => {
+  const Tag = el;
+  return (
+    <Tag className={className}>
+      {lines.map((line, i) => (
+        <span key={i} className="mask-line">
+          <motion.span
+            className={`block ${lineClassName} ${line.className || ""}`}
+            initial={{ y: "110%" }}
+            animate={{ y: "0%" }}
+            transition={{ duration: 0.9, delay: baseDelay + i * 0.13, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {line.text}
+          </motion.span>
+        </span>
+      ))}
+    </Tag>
+  );
+};
 
 export const GoldRule = ({ className = "" }) => (
   <motion.span

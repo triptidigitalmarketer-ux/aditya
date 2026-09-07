@@ -103,7 +103,7 @@ const Footer = () => (
 
       <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-ivory/10 pt-8 sm:flex-row sm:items-center">
         <p className="text-xs text-ivory/40">
-          © {new Date().getFullYear()} Aditya Gaur, Advocate. All rights reserved.
+          © {new Date().getFullYear()} Aditya Gaur & Associates. All rights reserved.
         </p>
         <div className="flex flex-wrap gap-5 text-xs uppercase tracking-wider text-ivory/50">
           <Link to="/disclaimer" data-testid="footer-disclaimer-link" className="transition-colors hover:text-gold">Disclaimer</Link>

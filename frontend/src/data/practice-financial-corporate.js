@@ -58,7 +58,7 @@ export const FINANCIAL_PAGES = [
   {
     slug: "debt-recovery-lawyer",
     category: "Financial Disputes",
-    seoTitle: "Debt Recovery Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Debt Recovery Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Debt Recovery — Money Suits, Commercial Recovery & Financial Disputes",
     metaDescription:
       "Debt recovery lawyer in Faridabad and Delhi NCR — recovery suits, summary suits, commercial recovery, legal notices and execution of money decrees.",
@@ -117,7 +117,7 @@ export const CORPORATE_PAGES = [
   {
     slug: "corporate-commercial-lawyer",
     category: "Corporate & Commercial",
-    seoTitle: "Corporate & Commercial Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Corporate & Commercial Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Corporate & Commercial Law",
     metaDescription:
       "Corporate and commercial legal services in Faridabad and Delhi NCR — commercial litigation, business disputes, corporate advisory, contracts and MSME legal support.",

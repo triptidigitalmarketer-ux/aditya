@@ -1,7 +1,7 @@
 export const SITE = {
-  name: "Aditya Gaur",
+  name: "Aditya Gaur & Associates",
   brandLine1: "ADITYA GAUR",
-  brandLine2: "ADVOCATE",
+  brandLine2: "& ASSOCIATES",
   tagline: "Legal Representation Across Delhi NCR & India",
   chamber: "Opposite District & Sessions Court, Faridabad, Haryana – 121002",
   chamberShort: "Opposite District & Sessions Court, Faridabad",
@@ -10,9 +10,9 @@ export const SITE = {
   whatsappHref: "https://wa.me/919582885482",
   email: "contact@adityagaurassociates.com",
   officeHours: "Monday – Saturday · 10:00 AM – 7:00 PM",
-  officeHoursSunday: "Sunday · Emergency Only",
+  emergencyLine: "Emergency Legal Assistance — Available Anytime",
   socials: null,
-  siteName: "Aditya Gaur, Advocate",
+  siteName: "Aditya Gaur & Associates",
 };
 
 export const NAV_LINKS = [
@@ -96,6 +96,21 @@ export const PRACTICE_CATEGORIES = [
     ],
   },
 ];
+
+export const CATEGORY_IMAGES = {
+  criminal:
+    "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+  "supreme-court":
+    "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1200&q=80",
+  family:
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+  civil:
+    "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
+  financial:
+    "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+  corporate:
+    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+};
 
 export const LOCATIONS = [
   { slug: "advocate-faridabad", label: "Faridabad", primary: true },

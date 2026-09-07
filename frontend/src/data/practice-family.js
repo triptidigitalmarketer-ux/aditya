@@ -2,10 +2,10 @@ export const FAMILY_PAGES = [
   {
     slug: "divorce-family-lawyer",
     category: "Matrimonial & Family Law",
-    seoTitle: "Divorce & Family Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Divorce & Family Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Divorce & Family Law",
     metaDescription:
-      "Divorce, mutual consent divorce, contested divorce, maintenance, alimony, child custody and family court matters across Faridabad and Delhi NCR. Aditya Gaur, Advocate.",
+      "Divorce, mutual consent divorce, contested divorce, maintenance, alimony, child custody and family court matters across Faridabad and Delhi NCR. Aditya Gaur & Associates.",
     intro:
       "Matrimonial litigation is as much about people as it is about law. The practice handles divorce, maintenance, custody and allied family court matters with discretion and straight talk — helping clients understand their rights, the realistic paths available, and the cost in time and emotion that each path involves.",
     takeaways: [
@@ -59,7 +59,7 @@ export const FAMILY_PAGES = [
   {
     slug: "divorce-lawyer",
     category: "Matrimonial & Family Law",
-    seoTitle: "Divorce Lawyer in Faridabad & Delhi NCR | Aditya Gaur, Advocate",
+    seoTitle: "Divorce Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Divorce — Legal Representation Before the Family Courts",
     metaDescription:
       "Divorce lawyer in Faridabad and Delhi NCR for mutual consent and contested divorce, judicial separation and allied relief. Clear advice, careful preparation.",
@@ -115,7 +115,7 @@ export const FAMILY_PAGES = [
   {
     slug: "mutual-consent-divorce-lawyer",
     category: "Matrimonial & Family Law",
-    seoTitle: "Mutual Consent Divorce Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Mutual Consent Divorce Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Mutual Consent Divorce — Procedure, Terms and Timeline",
     metaDescription:
       "Mutual consent divorce lawyer in Faridabad and Delhi NCR. Joint petition, settlement terms, cooling-off waiver and decree — the complete procedure explained.",
@@ -172,7 +172,7 @@ export const FAMILY_PAGES = [
   {
     slug: "contested-divorce-lawyer",
     category: "Matrimonial & Family Law",
-    seoTitle: "Contested Divorce Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Contested Divorce Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Contested Divorce — When One Side Does Not Agree",
     metaDescription:
       "Contested divorce representation in Faridabad and Delhi NCR — cruelty, desertion and other statutory grounds, evidence strategy, interim maintenance and custody.",
@@ -228,7 +228,7 @@ export const FAMILY_PAGES = [
   {
     slug: "maintenance-alimony-lawyer",
     category: "Matrimonial & Family Law",
-    seoTitle: "Maintenance & Alimony Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Maintenance & Alimony Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Maintenance & Alimony — Financial Relief in Matrimonial Matters",
     metaDescription:
       "Maintenance and alimony matters in Faridabad and Delhi NCR — interim and permanent maintenance, Section 144 BNSS claims, enforcement and variation.",
@@ -284,7 +284,7 @@ export const FAMILY_PAGES = [
   {
     slug: "child-custody-lawyer",
     category: "Matrimonial & Family Law",
-    seoTitle: "Child Custody Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Child Custody Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Child Custody & Visitation — The Welfare of the Child First",
     metaDescription:
       "Child custody and visitation matters in Faridabad and Delhi NCR — physical and legal custody, guardianship, visitation schedules and modification of orders.",

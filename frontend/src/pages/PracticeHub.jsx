@@ -4,13 +4,13 @@ import Seo from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
-import { PRACTICE_CATEGORIES } from "@/data/site";
+import { PRACTICE_CATEGORIES, CATEGORY_IMAGES } from "@/data/site";
 
 const PracticeHub = () => (
   <div data-testid="practice-hub-page">
     <Seo
-      title="Practice Areas | Aditya Gaur, Advocate — Faridabad & Delhi NCR"
-      siteName="Aditya Gaur, Advocate"
+      title="Practice Areas | Aditya Gaur & Associates — Faridabad & Delhi NCR"
+      siteName="Aditya Gaur & Associates"
       description="Practice areas: criminal defence, bail & anticipatory bail, FIR quashing, divorce & family law, property & civil disputes, RERA, cheque bounce, debt recovery and corporate-commercial law."
     />
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
@@ -33,7 +33,16 @@ const PracticeHub = () => (
           <Reveal key={cat.id} delay={0.05}>
             <div className="grid grid-cols-1 gap-8 border-t border-navy/10 pt-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
-                <span className="font-serif text-sm italic text-gold-dark">0{i + 1}</span>
+                <div className="overflow-hidden border border-navy/10">
+                  <img
+                    src={CATEGORY_IMAGES[cat.id]}
+                    alt={`${cat.title} — Aditya Gaur & Associates, Faridabad`}
+                    data-testid={`hub-image-${cat.id}`}
+                    loading="lazy"
+                    className="aspect-[16/9] w-full object-cover"
+                  />
+                </div>
+                <span className="mt-5 block font-serif text-sm italic text-gold-dark">0{i + 1}</span>
                 <h2 className="mt-2 font-serif text-2xl text-navy sm:text-3xl">{cat.title}</h2>
                 <p className="mt-4 max-w-md text-base leading-relaxed text-charcoal/75">{cat.description}</p>
               </div>

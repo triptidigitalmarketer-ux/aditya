@@ -2,7 +2,7 @@ export const CRIMINAL_PAGES = [
   {
     slug: "criminal-law-lawyer",
     category: "Criminal Law & Defence",
-    seoTitle: "Criminal Lawyer in Faridabad & Delhi NCR | Aditya Gaur, Advocate",
+    seoTitle: "Criminal Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Criminal Law & Defence",
     metaDescription:
       "Criminal defence representation in Faridabad, Delhi NCR and across India — bail, anticipatory bail, FIR matters, criminal complaints, trials, cyber crime and FIR quashing.",
@@ -59,10 +59,10 @@ export const CRIMINAL_PAGES = [
   {
     slug: "bail-lawyer",
     category: "Criminal Law & Defence",
-    seoTitle: "Bail Lawyer in Faridabad & Delhi NCR | Aditya Gaur, Advocate",
+    seoTitle: "Bail Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Bail Matters — Regular Bail Representation",
     metaDescription:
-      "Bail applications before District Courts and High Courts in Faridabad, Delhi NCR and across India. Careful, prompt bail representation by Aditya Gaur, Advocate.",
+      "Bail applications before District Courts and High Courts in Faridabad, Delhi NCR and across India. Careful, prompt bail representation by Aditya Gaur & Associates.",
     intro:
       "When a person is in custody, every day matters. Bail work demands speed without carelessness — a well-prepared application, the right forum, and arguments grounded in the facts and the settled principles that courts apply while granting bail.",
     takeaways: [
@@ -116,10 +116,10 @@ export const CRIMINAL_PAGES = [
   {
     slug: "anticipatory-bail-lawyer",
     category: "Criminal Law & Defence",
-    seoTitle: "Anticipatory Bail Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Anticipatory Bail Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Anticipatory Bail — Protection Before Arrest",
     metaDescription:
-      "Anticipatory bail applications before Sessions Courts and High Courts across Delhi NCR. Understand the remedy, the process and what courts consider. Aditya Gaur, Advocate.",
+      "Anticipatory bail applications before Sessions Courts and High Courts across Delhi NCR. Understand the remedy, the process and what courts consider. Aditya Gaur & Associates.",
     intro:
       "Anticipatory bail is the remedy the law gives a person who apprehends arrest in a cognizable, non-bailable offence. It is time-sensitive work: the quality of the first application often decides whether a client faces custody or faces the investigation from outside it.",
     takeaways: [
@@ -173,7 +173,7 @@ export const CRIMINAL_PAGES = [
   {
     slug: "fir-quashing-lawyer",
     category: "Criminal Law & Defence",
-    seoTitle: "FIR Quashing Lawyer — Section 482 CrPC Petitions | Aditya Gaur",
+    seoTitle: "FIR Quashing Lawyer — Section 482 CrPC Petitions | Aditya Gaur & Associates",
     h1: "FIR Quashing Before the High Court",
     metaDescription:
       "Quashing of FIRs and criminal complaints under the inherent powers of the High Court. Matters before Punjab & Haryana High Court, Delhi High Court and other forums.",

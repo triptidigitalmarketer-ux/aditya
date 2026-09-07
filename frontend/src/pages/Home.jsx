@@ -5,7 +5,7 @@ import { ArrowRight, ArrowUpRight, MapPin, Scale, Landmark, Building2, Globe2 } 
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
-import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL } from "@/data/site";
+import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES } from "@/data/site";
 import { API } from "@/api";
 
 const TRUST_ITEMS = ["Faridabad Chamber", "Delhi NCR", "Pan-India Matters", "High Courts", "Supreme Court"];
@@ -76,7 +76,7 @@ const Home = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    name: "Aditya Gaur, Advocate",
+    name: "Aditya Gaur & Associates",
     description:
       "Professional legal representation across Faridabad, Delhi NCR and India — criminal defence, matrimonial, property, financial and commercial matters.",
     address: {
@@ -92,8 +92,8 @@ const Home = () => {
   return (
     <div data-testid="home-page">
       <Seo
-        title="Aditya Gaur, Advocate | Lawyer in Faridabad, Delhi NCR & Pan-India"
-        siteName="Aditya Gaur, Advocate"
+        title="Aditya Gaur & Associates | Lawyer in Faridabad, Delhi NCR & Pan-India"
+        siteName="Aditya Gaur & Associates"
         description="Professional legal representation across Faridabad, Delhi, Noida, Greater Noida, Gurugram and India. District Courts, High Courts & Supreme Court matters. Chamber: District Courts, Sector 12, Faridabad."
         jsonLd={jsonLd}
       />
@@ -109,15 +109,16 @@ const Home = () => {
               className="text-xs font-mono uppercase tracking-[0.35em] text-gold-dark font-semibold"
               data-testid="hero-overline"
             >
-              {SITE.brandLine1} — {SITE.brandLine2}
+              {SITE.brandLine1} {SITE.brandLine2}
             </motion.p>
             <MaskedLines
+              el="h1"
               className="mt-7"
               lineClassName="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight text-navy"
               lines={[
                 { text: "Legal Representation" },
                 { text: "Across Delhi NCR" },
-                { text: "& India", className: "italic text-navy-light" },
+                { text: "& India", className: "text-navy-light" },
               ]}
             />
             <motion.div
@@ -159,7 +160,7 @@ const Home = () => {
               <motion.div style={{ y: portraitY }} className="relative overflow-hidden bg-navy/5">
                 <img
                   src={PORTRAIT_URL}
-                  alt="Aditya Gaur, Advocate"
+                  alt="Aditya Gaur & Associates"
                   data-testid="hero-portrait"
                   className="aspect-[4/5] w-full object-cover object-top"
                   loading="eager"
@@ -276,7 +277,17 @@ const Home = () => {
           <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {PRACTICE_CATEGORIES.map((cat, i) => (
               <Reveal key={cat.id} delay={i * 0.08} className={i === 0 ? "md:col-span-2 lg:col-span-1" : ""}>
-                <div className="group h-full border border-navy/10 border-l-2 border-l-transparent bg-cream p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-l-gold hover:shadow-xl">
+                <div className="group h-full overflow-hidden border border-navy/10 border-l-2 border-l-transparent bg-cream shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-l-gold hover:shadow-xl">
+                  <div className="h-40 overflow-hidden">
+                    <img
+                      src={CATEGORY_IMAGES[cat.id]}
+                      alt={`${cat.title} — Aditya Gaur & Associates, Faridabad`}
+                      data-testid={`practice-image-${cat.id}`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-8">
                   <span className="font-serif text-sm italic text-gold-dark">0{i + 1}</span>
                   <h3 className="mt-3 font-serif text-2xl text-navy">{cat.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal/70">{cat.description}</p>
@@ -294,6 +305,7 @@ const Home = () => {
                       </li>
                     ))}
                   </ul>
+                  </div>
                 </div>
               </Reveal>
             ))}

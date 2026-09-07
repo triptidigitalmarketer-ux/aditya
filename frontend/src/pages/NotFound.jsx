@@ -3,7 +3,7 @@ import Seo from "@/components/Seo";
 
 const NotFound = () => (
   <div data-testid="not-found-page" className="mx-auto flex max-w-3xl flex-col items-center px-4 py-28 text-center">
-    <Seo title="Page Not Found | Aditya Gaur, Advocate" siteName="Aditya Gaur, Advocate" description="The page you are looking for could not be found." />
+    <Seo title="Page Not Found | Aditya Gaur & Associates" siteName="Aditya Gaur & Associates" description="The page you are looking for could not be found." />
     <p className="font-serif text-7xl italic text-gold/70">404</p>
     <h1 className="mt-6 font-serif text-3xl text-navy sm:text-4xl">This page could not be found</h1>
     <p className="mt-4 max-w-md text-base leading-relaxed text-charcoal/70">

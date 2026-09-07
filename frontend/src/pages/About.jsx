@@ -19,8 +19,8 @@ const About = () => (
   <div data-testid="about-page">
     <Seo
       title="About Aditya Gaur | Advocate, Faridabad & Delhi NCR"
-      siteName="Aditya Gaur, Advocate"
-      description="About Aditya Gaur, Advocate — chamber at District Courts, Sector 12, Faridabad. Legal practice across Delhi NCR and Pan-India, before District Courts, High Courts and the Supreme Court of India."
+      siteName="Aditya Gaur & Associates"
+      description="About Aditya Gaur & Associates — chamber at District Courts, Sector 12, Faridabad. Legal practice across Delhi NCR and Pan-India, before District Courts, High Courts and the Supreme Court of India."
     />
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <Breadcrumbs trail={[{ label: "Home", to: "/" }, { label: "About" }]} />
@@ -31,7 +31,7 @@ const About = () => (
               <div className="absolute -left-3 -top-3 h-full w-full border border-gold/50" aria-hidden="true" />
               <img
                 src={PORTRAIT_URL}
-                alt="Aditya Gaur, Advocate"
+                alt="Aditya Gaur & Associates"
                 data-testid="about-portrait"
                 className="relative aspect-[4/5] w-full object-cover object-top"
               />
@@ -95,6 +95,60 @@ const About = () => (
                   <ArrowUpRight className="h-3 w-3 text-gold-dark transition-colors group-hover:text-gold" />
                 </Link>
               ))}
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+    {/* TEAM */}
+    <section className="border-t border-navy/10 bg-white" data-testid="team-section">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <Reveal>
+          <Overline>The Chambers</Overline>
+          <GoldRule className="mt-3 w-16" />
+          <h2 className="mt-5 font-serif text-3xl text-navy sm:text-4xl">Our Team</h2>
+        </Reveal>
+        <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <Reveal className="lg:col-span-4">
+            <div className="relative">
+              <div className="absolute -left-3 -top-3 h-full w-full border border-gold/50" aria-hidden="true" />
+              <img
+                src={PORTRAIT_URL}
+                alt="Aditya Gaur — Founder & Managing Advocate, Aditya Gaur & Associates"
+                data-testid="team-founder-photo"
+                loading="lazy"
+                className="relative aspect-[4/5] w-full object-cover object-top"
+              />
+            </div>
+            <div className="mt-6">
+              <p className="font-serif text-2xl text-navy" data-testid="team-founder-name">Aditya Gaur</p>
+              <p className="mt-1.5 text-xs font-mono uppercase tracking-[0.25em] text-gold-dark">
+                Founder &amp; Managing Advocate
+              </p>
+              <p className="mt-3 max-w-sm text-sm leading-relaxed text-charcoal/70">
+                Chamber opposite the District &amp; Sessions Court, Faridabad. Practice across Delhi NCR and
+                Pan-India.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.15} className="lg:col-span-8">
+            <div className="flex h-full flex-col justify-center border border-navy/10 bg-cream p-8 lg:p-12" data-testid="team-associates-card">
+              <h3 className="font-serif text-2xl text-navy">Associates &amp; Assisting Counsel</h3>
+              <p className="mt-4 text-base leading-relaxed text-charcoal/80">
+                Aditya Gaur &amp; Associates works with a network of associates and assisting counsel across Delhi
+                NCR, so that every matter — whether before a District Court, a High Court or the Supreme Court of
+                India — is attended with preparation and presence.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-charcoal/80">
+                Individual profiles of team members are published here as they are formally announced.
+              </p>
+              <Link
+                to="/contact"
+                data-testid="team-contact-link"
+                className="mt-7 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-navy transition-colors hover:text-gold-dark"
+              >
+                Work With The Chambers <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </div>
           </Reveal>
         </div>

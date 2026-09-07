@@ -48,7 +48,7 @@ const Courts = () => (
   <div data-testid="courts-page">
     <Seo
       title="Courts & Jurisdiction | District Courts, High Courts, Supreme Court — Aditya Gaur"
-      siteName="Aditya Gaur, Advocate"
+      siteName="Aditya Gaur & Associates"
       description="Courts and jurisdiction: District Courts at Faridabad and across Delhi NCR, High Court matters, Supreme Court of India, and Pan-India legal matters — subject to jurisdiction and the nature of the case."
     />
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">

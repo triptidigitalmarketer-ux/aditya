@@ -6,8 +6,8 @@ const PAGES = {
   disclaimer: {
     slug: "disclaimer",
     title: "Disclaimer",
-    seoTitle: "Disclaimer | Aditya Gaur, Advocate",
-    metaDescription: "Disclaimer for the website of Aditya Gaur, Advocate — general information only, no legal advice, no advocate-client relationship through this website.",
+    seoTitle: "Disclaimer | Aditya Gaur & Associates",
+    metaDescription: "Disclaimer for the website of Aditya Gaur & Associates — general information only, no legal advice, no advocate-client relationship through this website.",
     sections: [
       {
         h: "General Information Only",
@@ -38,7 +38,7 @@ const PAGES = {
       {
         h: "Acceptance",
         p: [
-          "By using this website, the visitor accepts this disclaimer in full. This disclaimer is subject to review and approval by Aditya Gaur, Advocate, and may be updated from time to time.",
+          "By using this website, the visitor accepts this disclaimer in full. This disclaimer is subject to review and approval by Aditya Gaur & Associates, and may be updated from time to time.",
         ],
       },
     ],
@@ -46,8 +46,8 @@ const PAGES = {
   privacy: {
     slug: "privacy-policy",
     title: "Privacy Policy",
-    seoTitle: "Privacy Policy | Aditya Gaur, Advocate",
-    metaDescription: "Privacy policy for the website of Aditya Gaur, Advocate — how enquiry information is collected, used and protected.",
+    seoTitle: "Privacy Policy | Aditya Gaur & Associates",
+    metaDescription: "Privacy policy for the website of Aditya Gaur & Associates — how enquiry information is collected, used and protected.",
     sections: [
       {
         h: "Information We Collect",
@@ -84,8 +84,8 @@ const PAGES = {
   terms: {
     slug: "terms-of-use",
     title: "Terms of Use",
-    seoTitle: "Terms of Use | Aditya Gaur, Advocate",
-    metaDescription: "Terms of use for the website of Aditya Gaur, Advocate — conditions governing the use of this website and its content.",
+    seoTitle: "Terms of Use | Aditya Gaur & Associates",
+    metaDescription: "Terms of use for the website of Aditya Gaur & Associates — conditions governing the use of this website and its content.",
     sections: [
       {
         h: "Acceptance of Terms",
@@ -126,7 +126,7 @@ const Legal = ({ page }) => {
   if (!data) return null;
   return (
     <div data-testid={`legal-page-${page}`}>
-      <Seo title={data.seoTitle} siteName="Aditya Gaur, Advocate" description={data.metaDescription} />
+      <Seo title={data.seoTitle} siteName="Aditya Gaur & Associates" description={data.metaDescription} />
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <Breadcrumbs trail={[{ label: "Home", to: "/" }, { label: data.title }]} />
         <Reveal>

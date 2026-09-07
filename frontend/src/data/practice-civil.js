@@ -2,7 +2,7 @@ export const CIVIL_PAGES = [
   {
     slug: "property-civil-lawyer",
     category: "Property & Civil Law",
-    seoTitle: "Property & Civil Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Property & Civil Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Property & Civil Law",
     metaDescription:
       "Property disputes, civil litigation, ancestral property, injunctions, landlord-tenant matters, recovery suits and RERA complaints across Faridabad and Delhi NCR.",
@@ -57,7 +57,7 @@ export const CIVIL_PAGES = [
   {
     slug: "property-dispute-lawyer",
     category: "Property & Civil Law",
-    seoTitle: "Property Dispute Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Property Dispute Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Property Disputes — Title, Possession, Partition & Ancestral Property",
     metaDescription:
       "Property dispute lawyer in Faridabad and Delhi NCR — title and possession suits, partition, ancestral property disputes, illegal possession and injunction matters.",
@@ -113,7 +113,7 @@ export const CIVIL_PAGES = [
   {
     slug: "civil-lawyer",
     category: "Property & Civil Law",
-    seoTitle: "Civil Litigation Lawyer in Faridabad & Delhi NCR | Aditya Gaur",
+    seoTitle: "Civil Litigation Lawyer in Faridabad & Delhi NCR | Aditya Gaur & Associates",
     h1: "Civil Litigation — Suits, Injunctions, Recovery & Contracts",
     metaDescription:
       "Civil litigation in Faridabad and Delhi NCR — suits for declaration, possession and recovery, injunction matters, contractual disputes and execution of decrees.",
@@ -169,10 +169,10 @@ export const CIVIL_PAGES = [
   {
     slug: "rera-lawyer",
     category: "Property & Civil Law",
-    seoTitle: "RERA Lawyer in Faridabad, Haryana & Delhi NCR | Aditya Gaur",
+    seoTitle: "RERA Lawyer in Faridabad, Haryana & Delhi NCR | Aditya Gaur & Associates",
     h1: "RERA Matters — Complaints Against Builders & Developers",
     metaDescription:
-      "RERA complaints in Haryana (HRERA) and Delhi NCR — delayed possession, refund claims, interest and compensation against builders. Aditya Gaur, Advocate.",
+      "RERA complaints in Haryana (HRERA) and Delhi NCR — delayed possession, refund claims, interest and compensation against builders. Aditya Gaur & Associates.",
     intro:
       "For homebuyers stuck between a builder's promises and an unfinished tower, RERA changed the equation: a dedicated authority, defined timelines, and real remedies — refund with interest, interest for delay, and compensation. The statute rewards those who use it correctly and early.",
     takeaways: [

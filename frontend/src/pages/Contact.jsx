@@ -8,9 +8,9 @@ import { SITE } from "@/data/site";
 const Contact = () => (
   <div data-testid="contact-page">
     <Seo
-      title="Contact — Discuss Your Legal Matter | Aditya Gaur, Advocate, Faridabad"
-      siteName="Aditya Gaur, Advocate"
-      description="Schedule a consultation with Aditya Gaur, Advocate. Chamber opposite the District & Sessions Court, Faridabad. Matters across Delhi NCR and Pan-India."
+      title="Contact — Discuss Your Legal Matter | Aditya Gaur & Associates, Faridabad"
+      siteName="Aditya Gaur & Associates"
+      description="Schedule a consultation with Aditya Gaur & Associates. Chamber opposite the District & Sessions Court, Faridabad. Matters across Delhi NCR and Pan-India."
     />
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <Breadcrumbs trail={[{ label: "Home", to: "/" }, { label: "Contact" }]} />
@@ -67,21 +67,6 @@ const Contact = () => (
                     {SITE.email}
                   </a>
                 </li>
-                <li className="border border-gold/40 bg-navy-deep/60 p-5">
-                  <p className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-[0.2em] text-gold">
-                    <Phone className="h-4 w-4" strokeWidth={1.5} /> Emergency Contact
-                  </p>
-                  <a
-                    href={SITE.phoneHref}
-                    data-testid="contact-phone-link"
-                    className="mt-2 inline-block font-serif text-2xl text-ivory transition-colors hover:text-gold"
-                  >
-                    {SITE.phoneDisplay}
-                  </a>
-                  <p className="mt-1.5 text-xs leading-relaxed text-ivory/55">
-                    For urgent matters — an arrest, a custody deadline or a time-barred notice.
-                  </p>
-                </li>
                 <li>
                   <p className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-[0.2em] text-gold">
                     <Clock className="h-4 w-4" strokeWidth={1.5} /> Office Hours
@@ -89,9 +74,21 @@ const Contact = () => (
                   <p className="mt-2.5 text-base text-ivory/85" data-testid="contact-office-hours">
                     {SITE.officeHours}
                   </p>
-                  <p className="mt-1.5 text-sm text-ivory/60" data-testid="contact-sunday-hours">
-                    {SITE.officeHoursSunday}
+                </li>
+                <li className="border border-gold/40 bg-navy-deep/60 p-5">
+                  <p className="flex items-center gap-2.5 text-xs font-mono uppercase tracking-[0.2em] text-gold">
+                    <Phone className="h-4 w-4" strokeWidth={1.5} /> Emergency
                   </p>
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-ivory/85" data-testid="contact-emergency-note">
+                    {SITE.emergencyLine}
+                  </p>
+                  <a
+                    href={SITE.phoneHref}
+                    data-testid="contact-phone-link"
+                    className="mt-1.5 inline-block font-serif text-2xl text-gold transition-colors hover:text-gold-light"
+                  >
+                    {SITE.phoneDisplay}
+                  </a>
                 </li>
               </ul>
               <a

@@ -2,7 +2,7 @@ export const LOCATION_PAGES = [
   {
     slug: "advocate-faridabad",
     city: "Faridabad",
-    seoTitle: "Advocate in Faridabad | Chamber at District Courts, Sector 12 — Aditya Gaur",
+    seoTitle: "Advocate in Faridabad | Chamber Opposite District & Sessions Court — Aditya Gaur & Associates",
     h1: "Advocate in Faridabad",
     metaDescription:
       "Advocate in Faridabad with chamber at District Courts, Sector 12. Criminal defence, divorce & family law, property disputes, cheque bounce and civil litigation in Faridabad.",
@@ -42,7 +42,7 @@ export const LOCATION_PAGES = [
   {
     slug: "advocate-delhi",
     city: "Delhi",
-    seoTitle: "Advocate in Delhi | Civil, Criminal & Matrimonial Matters — Aditya Gaur",
+    seoTitle: "Advocate in Delhi | Civil, Criminal & Matrimonial Matters — Aditya Gaur & Associates",
     h1: "Advocate in Delhi",
     metaDescription:
       "Advocate in Delhi for criminal defence, bail, divorce, property disputes, cheque bounce and commercial matters before Delhi's District Courts and the Delhi High Court.",
@@ -82,7 +82,7 @@ export const LOCATION_PAGES = [
   {
     slug: "advocate-noida",
     city: "Noida",
-    seoTitle: "Advocate in Noida | Property, RERA, Criminal & Family Matters — Aditya Gaur",
+    seoTitle: "Advocate in Noida | Property, RERA, Criminal & Family Matters — Aditya Gaur & Associates",
     h1: "Advocate in Noida",
     metaDescription:
       "Advocate in Noida for property and builder disputes, UP-RERA complaints, criminal defence, divorce and family matters before the District Court, Surajpur, Greater Noida.",
@@ -122,7 +122,7 @@ export const LOCATION_PAGES = [
   {
     slug: "advocate-greater-noida",
     city: "Greater Noida",
-    seoTitle: "Advocate in Greater Noida | District Court Surajpur Matters — Aditya Gaur",
+    seoTitle: "Advocate in Greater Noida | District Court Surajpur Matters — Aditya Gaur & Associates",
     h1: "Advocate in Greater Noida",
     metaDescription:
       "Advocate in Greater Noida for matters before the District Court Surajpur — property disputes, UP-RERA complaints, criminal defence, family court and recovery matters.",
@@ -162,7 +162,7 @@ export const LOCATION_PAGES = [
   {
     slug: "advocate-gurugram",
     city: "Gurugram",
-    seoTitle: "Advocate in Gurugram (Gurgaon) | Corporate, Property & Criminal — Aditya Gaur",
+    seoTitle: "Advocate in Gurugram (Gurgaon) | Corporate, Property & Criminal — Aditya Gaur & Associates",
     h1: "Advocate in Gurugram",
     metaDescription:
       "Advocate in Gurugram for corporate and commercial disputes, property and RERA matters, criminal defence and matrimonial litigation before the Gurugram courts.",
@@ -202,7 +202,7 @@ export const LOCATION_PAGES = [
   {
     slug: "delhi-ncr-lawyer",
     city: "Delhi NCR",
-    seoTitle: "Delhi NCR Lawyer | Faridabad, Delhi, Noida, Gurugram — Aditya Gaur, Advocate",
+    seoTitle: "Delhi NCR Lawyer | Faridabad, Delhi, Noida, Gurugram — Aditya Gaur & Associates",
     h1: "Advocate for Delhi NCR",
     metaDescription:
       "Lawyer for Delhi NCR matters — Faridabad, Delhi, Noida, Greater Noida, Gurugram. Criminal, matrimonial, property, cheque bounce and commercial litigation across NCR.",
@@ -242,7 +242,7 @@ export const LOCATION_PAGES = [
   {
     slug: "pan-india-legal-services",
     city: "Pan-India",
-    seoTitle: "Pan-India Legal Services | Supreme Court & Multi-State Matters — Aditya Gaur",
+    seoTitle: "Pan-India Legal Services | Supreme Court & Multi-State Matters — Aditya Gaur & Associates",
     h1: "Pan-India Legal Services",
     metaDescription:
       "Legal services across India — Supreme Court matters, High Court proceedings and multi-state disputes handled from Delhi NCR, subject to jurisdiction and nature of the case.",
