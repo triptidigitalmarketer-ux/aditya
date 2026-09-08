@@ -70,7 +70,11 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - "Why Aditya Gaur" USP section REMOVED from homepage per user request — it now lives only on the About page (after Professional Philosophy, before The Team), via the shared components/UspSection.jsx. Homepage flow verified: hero slider → jurisdiction marquee/quick-contact strip → "A practice built on…" preview with 0px gaps (DOM geometry check).
 - Footer socials enabled: SITE.socials = { linkedin, email } in site.js — footer renders LinkedIn icon (external, new tab) + Mail icon (mailto:contact@adityagaurassociates.com). data-testids: footer-linkedin, footer-email-icon.
 - About team section: small subtle LinkedIn icon link under each photo — founder featured profile (team-founder-linkedin) + all 3 member cards (team-member-linkedin-1/2/3).
-- IMPORTANT: ALL LinkedIn URLs are TEMPORARY PLACEHOLDERS (currently https://www.linkedin.com/in/tripti-rajput-performance-marketer/) — marked with code comments in site.js and About.jsx; swap for each person's real profile once provided.
+- IMPORTANT: ALL LinkedIn URLs are TEMPORARY PLACEHOLDERS (currently https://www.linkedin.com/in/tripti-rajput-performance-marketer/) — marked with code comments in site.js and About.jsx; swap for each person's real profile once provided. (Asked user for real URLs 2026-09-08 — not yet provided.)
+
+### Update 2026-09-08 (session 2, contd. 2) — WhatsApp float live
+- Floating WhatsApp chat button (components/WhatsAppFloat.jsx) rendered globally via Layout, hidden on /admin routes. Fixed bottom-right, #25D366, official glyph SVG, opens wa.me/919582885482 with prefilled message. data-testid: whatsapp-float-btn. Verified on mobile 390px + confirmed absent on /admin/login.
+- Resend enquiry email alerts: backend code already wired (notify_enquiry in server.py; needs RESEND_API_KEY + SENDER_EMAIL + NOTIFY_EMAIL in backend/.env, then `sudo supervisorctl restart backend`). Playbook confirmed. BLOCKED: user has not yet provided the Resend API key.
 
 ### Update 2026-09-08 — Photo live + final breakpoint sweep
 - Aditya Gaur's real professional photo live: uploaded PNG cropped to 4:5, optimized to WebP (122KB, 960×1200) at /aditya-gaur-advocate.webp; used in hero, About bio, team featured profile, and as the homepage OG share image.
