@@ -72,6 +72,11 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - About team section: small subtle LinkedIn icon link under each photo — founder featured profile (team-founder-linkedin) + all 3 member cards (team-member-linkedin-1/2/3).
 - IMPORTANT: ALL LinkedIn URLs are TEMPORARY PLACEHOLDERS (currently https://www.linkedin.com/in/tripti-rajput-performance-marketer/) — marked with code comments in site.js and About.jsx; swap for each person's real profile once provided. (Asked user for real URLs 2026-09-08 — not yet provided.)
 
+### Update 2026-09-08 (session 2, contd. 3) — Deployment readiness: PASS
+- Deployment health check initially FAILED on one blocker: CORS origins hardcoded in server.py (missing Emergent domain pattern). Fixed: CORS now reads CORS_ORIGINS from backend/.env ('*'); unused FRONTEND_URL code removed.
+- Verified live: OPTIONS preflight returns access-control-allow-origin correctly, GET /api/articles 200, both services running under supervisor.
+- Re-run health check: PASS — no hardcoded secrets/URLs, env-only config, valid supervisor config, idempotent seeding, ready for Kubernetes deployment on Emergent.
+
 ### Update 2026-09-08 (session 2, contd. 2) — WhatsApp float live
 - Floating WhatsApp chat button (components/WhatsAppFloat.jsx) rendered globally via Layout, hidden on /admin routes. Fixed bottom-right, #25D366, official glyph SVG, opens wa.me/919582885482 with prefilled message. data-testid: whatsapp-float-btn. Verified on mobile 390px + confirmed absent on /admin/login.
 - Resend enquiry email alerts: backend code already wired (notify_enquiry in server.py; needs RESEND_API_KEY + SENDER_EMAIL + NOTIFY_EMAIL in backend/.env, then `sudo supervisorctl restart backend`). Playbook confirmed. BLOCKED: user has not yet provided the Resend API key.
