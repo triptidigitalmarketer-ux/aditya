@@ -72,6 +72,9 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - About team section: small subtle LinkedIn icon link under each photo — founder featured profile (team-founder-linkedin) + all 3 member cards (team-member-linkedin-1/2/3).
 - IMPORTANT: ALL LinkedIn URLs are TEMPORARY PLACEHOLDERS (currently https://www.linkedin.com/in/tripti-rajput-performance-marketer/) — marked with code comments in site.js and About.jsx; swap for each person's real profile once provided. (Asked user for real URLs 2026-09-08 — not yet provided.)
 
+### Update 2026-09-08 (session 2, contd. 4) — Contact emergency copy
+- Contact page sidebar Emergency block subtext changed to "For Urgent Matters — Call the Chamber Directly" (phone + styling unchanged). ArticlePage sticky sidebar still uses SITE.emergencyLine — untouched per scope.
+
 ### Update 2026-09-08 (session 2, contd. 3) — Deployment readiness: PASS
 - Deployment health check initially FAILED on one blocker: CORS origins hardcoded in server.py (missing Emergent domain pattern). Fixed: CORS now reads CORS_ORIGINS from backend/.env ('*'); unused FRONTEND_URL code removed.
 - Verified live: OPTIONS preflight returns access-control-allow-origin correctly, GET /api/articles 200, both services running under supervisor.

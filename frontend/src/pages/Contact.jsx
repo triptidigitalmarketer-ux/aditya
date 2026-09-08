@@ -80,7 +80,7 @@ const Contact = () => (
                     <Phone className="h-4 w-4" strokeWidth={1.5} /> Emergency
                   </p>
                   <p className="mt-2 text-sm font-medium leading-relaxed text-ivory/85" data-testid="contact-emergency-note">
-                    {SITE.emergencyLine}
+                    For Urgent Matters — Call the Chamber Directly
                   </p>
                   <a
                     href={SITE.phoneHref}
