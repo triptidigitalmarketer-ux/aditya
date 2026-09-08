@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Linkedin } from "lucide-react";
 import Seo from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
@@ -129,6 +129,17 @@ const About = () => (
                   className="relative aspect-[4/5] w-full object-cover object-top"
                 />
               </div>
+              {/* LinkedIn URL is a TEMPORARY PLACEHOLDER — swap for Aditya Gaur's real profile once provided */}
+              <a
+                href={SITE.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="team-founder-linkedin"
+                aria-label="LinkedIn profile (placeholder link)"
+                className="mt-5 inline-flex h-8 w-8 items-center justify-center border border-navy/15 text-navy/50 transition-colors hover:border-gold hover:text-gold-dark"
+              >
+                <Linkedin className="h-3.5 w-3.5" />
+              </a>
             </div>
             <div className="flex flex-col justify-center sm:col-span-8">
               <p className="font-serif text-3xl text-navy" data-testid="team-founder-name">
@@ -162,6 +173,19 @@ const About = () => (
                   loading="lazy"
                   className="aspect-[4/5] w-full object-cover object-top"
                 />
+                {/* LinkedIn URL is a TEMPORARY PLACEHOLDER — swap for this member's real profile once provided */}
+                <div className="border-t border-dashed border-navy/15 px-7 py-3">
+                  <a
+                    href={SITE.socials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`team-member-linkedin-${n}`}
+                    aria-label="LinkedIn profile (placeholder link)"
+                    className="inline-flex h-8 w-8 items-center justify-center border border-navy/15 text-navy/50 transition-colors hover:border-gold hover:text-gold-dark"
+                  >
+                    <Linkedin className="h-3.5 w-3.5" />
+                  </a>
+                </div>
                 <div className="flex flex-1 flex-col p-7">
                   <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
                     Awaiting verified profile

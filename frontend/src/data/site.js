@@ -11,7 +11,12 @@ export const SITE = {
   email: "contact@adityagaurassociates.com",
   officeHours: "Monday – Saturday · 10:00 AM – 7:00 PM",
   emergencyLine: "Emergency Legal Assistance — Available Anytime",
-  socials: null,
+  // NOTE (2026-09-08): The LinkedIn URL below is a TEMPORARY PLACEHOLDER supplied by the site owner.
+  // It must be swapped for each individual's real profile link once provided (founder + 3 team members).
+  socials: {
+    linkedin: "https://www.linkedin.com/in/tripti-rajput-performance-marketer/", // PLACEHOLDER — replace with real profile
+    email: "contact@adityagaurassociates.com",
+  },
   siteName: "Aditya Gaur & Associates",
 };
 

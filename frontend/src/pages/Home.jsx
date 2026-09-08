@@ -8,7 +8,6 @@ import CtaSection from "@/components/CtaSection";
 import { HeroSlider } from "@/components/HeroSlider";
 import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual, FLAGS } from "@/data/site";
 import { API } from "@/api";
-import { UspSection } from "@/components/UspSection";
 
 const CHAPTERS = [
   {
@@ -148,9 +147,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* USP — WHY ADITYA GAUR */}
-      <UspSection />
 
       {/* JURISDICTION MARQUEE + QUICK CONTACT BAR — each with its own reserved space in normal flow */}
       <section data-testid="trust-strip" className="bg-navy">

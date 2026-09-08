@@ -66,6 +66,12 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Code health: fetchpriority → fetchPriority (React warning fixed); portraitY renamed sliderY.
 - Testing: testing_agent full frontend pass 100% (autoplay, hover pause/resume, dot jump + permanent manual pause, Learn More routes, reduced-motion, mobile 390px, team photos, zero console errors). About USP placement verified by DOM order check + desktop/mobile screenshots.
 
+### Update 2026-09-08 (session 2, contd.) — USP moved off homepage + social links live
+- "Why Aditya Gaur" USP section REMOVED from homepage per user request — it now lives only on the About page (after Professional Philosophy, before The Team), via the shared components/UspSection.jsx. Homepage flow verified: hero slider → jurisdiction marquee/quick-contact strip → "A practice built on…" preview with 0px gaps (DOM geometry check).
+- Footer socials enabled: SITE.socials = { linkedin, email } in site.js — footer renders LinkedIn icon (external, new tab) + Mail icon (mailto:contact@adityagaurassociates.com). data-testids: footer-linkedin, footer-email-icon.
+- About team section: small subtle LinkedIn icon link under each photo — founder featured profile (team-founder-linkedin) + all 3 member cards (team-member-linkedin-1/2/3).
+- IMPORTANT: ALL LinkedIn URLs are TEMPORARY PLACEHOLDERS (currently https://www.linkedin.com/in/tripti-rajput-performance-marketer/) — marked with code comments in site.js and About.jsx; swap for each person's real profile once provided.
+
 ### Update 2026-09-08 — Photo live + final breakpoint sweep
 - Aditya Gaur's real professional photo live: uploaded PNG cropped to 4:5, optimized to WebP (122KB, 960×1200) at /aditya-gaur-advocate.webp; used in hero, About bio, team featured profile, and as the homepage OG share image.
 - Top bars restructured: jurisdiction marquee (top, single deduplicated loop) + quick-contact strip (bottom: chamber address + phone + Book a Consultation link), each with its own reserved height — verified zero overlap.

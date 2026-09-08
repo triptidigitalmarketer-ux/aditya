@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Linkedin, Instagram, Twitter } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin } from "lucide-react";
 import { SITE, PRACTICE_CATEGORIES, LOCATIONS, NAV_LINKS } from "@/data/site";
 
 const Footer = () => (
@@ -16,19 +16,17 @@ const Footer = () => (
             High Courts and the Supreme Court of India.
           </p>
           {SITE.socials && (
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex gap-3" data-testid="footer-socials">
               {[
-                { icon: Linkedin, href: SITE.socials.linkedin, id: "footer-linkedin" },
-                { icon: Instagram, href: SITE.socials.instagram, id: "footer-instagram" },
-                { icon: Twitter, href: SITE.socials.twitter, id: "footer-twitter" },
-              ].map(({ icon: Icon, href, id }) => (
+                { icon: Linkedin, href: SITE.socials.linkedin, id: "footer-linkedin", label: "LinkedIn (placeholder link)", external: true },
+                { icon: Mail, href: `mailto:${SITE.socials.email}`, id: "footer-email-icon", label: "Email", external: false },
+              ].map(({ icon: Icon, href, id, label, external }) => (
                 <a
                   key={id}
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   data-testid={id}
-                  aria-label={id}
+                  aria-label={label}
                   className="flex h-9 w-9 items-center justify-center border border-ivory/20 text-ivory/70 transition-colors hover:border-gold hover:text-gold"
                 >
                   <Icon className="h-4 w-4" />
