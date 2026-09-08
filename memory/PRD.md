@@ -59,6 +59,13 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - Duplicate ticker fixed: marquee now scrolls practice-area names; the navy trust strip keeps the location items (no duplicated content).
 - Note: testing_agent tool is not available in this environment; verification was done via automated multi-breakpoint browser checks (opacity sweep + geometry overlap checks + screenshots).
 
+### Update 2026-09-08 (session 2) — Hero practice slider + team photo + shared USP
+- Hero right-side static portrait replaced with auto-playing practice-area slider (components/HeroSlider.jsx): 6 slides from PRACTICE_CATEGORIES + CATEGORY_IMAGES (same images/descriptions as the practice grid — content stays consistent), 5.5s autoplay, opacity crossfade, pause on hover/focus, dot navigation (any manual click stops autoplay permanently), progressive image loading (slides 0/1 eager, rest deferred), prefers-reduced-motion disables autoplay + transitions. Hero left column (h1, subtext, both CTAs) untouched.
+- About team: user-provided B&W photo (/team-member.webp, 864×1184, 37KB) applied to ALL 3 team-member cards per explicit user instruction; name/designation/qualification lines remain "to be updated" until verified details arrive. Founder card unchanged.
+- "Why Aditya Gaur" 4-card USP extracted to shared components/UspSection.jsx — rendered on Home (original position) and About (after Professional Philosophy, before The Team). Identical markup/testids (usp-section, usp-1..4).
+- Code health: fetchpriority → fetchPriority (React warning fixed); portraitY renamed sliderY.
+- Testing: testing_agent full frontend pass 100% (autoplay, hover pause/resume, dot jump + permanent manual pause, Learn More routes, reduced-motion, mobile 390px, team photos, zero console errors). About USP placement verified by DOM order check + desktop/mobile screenshots.
+
 ### Update 2026-09-08 — Photo live + final breakpoint sweep
 - Aditya Gaur's real professional photo live: uploaded PNG cropped to 4:5, optimized to WebP (122KB, 960×1200) at /aditya-gaur-advocate.webp; used in hero, About bio, team featured profile, and as the homepage OG share image.
 - Top bars restructured: jurisdiction marquee (top, single deduplicated loop) + quick-contact strip (bottom: chamber address + phone + Book a Consultation link), each with its own reserved height — verified zero overlap.
@@ -84,6 +91,7 @@ Home, About, Practice Areas hub + detailed service pages, Courts & Jurisdiction,
 - P2: Additional practice pages (DRT/SARFAESI/NCLT/insolvency) only if those services are genuinely offered; testimonials section once genuine reviews are supplied; Google Business Profile for local SEO.
 
 ## Next Tasks
-1. User supplies verified phone/WhatsApp/email/social + portrait + bio fields.
+1. User supplies verified team member names/designations/qualifications (photos currently the same B&W image in all 3 slots per user instruction) + founder bio fields + socials.
 2. User provides Resend API key (resend.com) to activate enquiry email notifications.
 3. Admin drafts first 3–5 Legal Insights articles from the planned-topics list.
+4. Genuine judgments/testimonials data → unhide gated sections (FLAGS.showJudgments / showTestimonials in site.js).

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight, User } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Seo from "@/components/Seo";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Reveal, Overline, GoldRule } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
+import { UspSection } from "@/components/UspSection";
 import { SITE, PORTRAIT_URL, PRACTICE_CATEGORIES } from "@/data/site";
 
 const BIO_FIELDS = [
@@ -100,6 +101,8 @@ const About = () => (
         </div>
       </div>
     </section>
+    {/* USP — WHY ADITYA GAUR */}
+    <UspSection />
     {/* TEAM */}
     <section className="border-t border-navy/10 bg-white" data-testid="team-section">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
@@ -152,11 +155,13 @@ const About = () => (
                 data-testid={`team-member-${n}`}
                 className="flex h-full flex-col border border-dashed border-navy/20 bg-cream/60"
               >
-                <div className="flex aspect-[16/10] items-center justify-center bg-navy/5">
-                  <div className="flex h-16 w-16 items-center justify-center border border-gold/40 text-gold-dark">
-                    <User className="h-7 w-7" strokeWidth={1.25} />
-                  </div>
-                </div>
+                <img
+                  src="/team-member.webp"
+                  alt="Team member — Aditya Gaur & Associates"
+                  data-testid={`team-member-photo-${n}`}
+                  loading="lazy"
+                  className="aspect-[4/5] w-full object-cover object-top"
+                />
                 <div className="flex flex-1 flex-col p-7">
                   <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
                     Awaiting verified profile

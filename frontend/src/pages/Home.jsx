@@ -5,31 +5,10 @@ import { ArrowRight, ArrowUpRight, MapPin, Phone, Scale, Landmark, Building2, Gl
 import Seo from "@/components/Seo";
 import { MaskedLines, Reveal, GoldRule, Overline, Marquee } from "@/components/Motion";
 import CtaSection from "@/components/CtaSection";
-import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, PORTRAIT_URL, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual, FLAGS } from "@/data/site";
+import { HeroSlider } from "@/components/HeroSlider";
+import { SITE, PRACTICE_CATEGORIES, LOCATIONS, MARQUEE_ITEMS, CATEGORY_IMAGES, INSIGHT_IMAGES, insightVisual, FLAGS } from "@/data/site";
 import { API } from "@/api";
-
-const USPS = [
-  {
-    num: "01",
-    title: "Focused on Resolution",
-    text: "A practical and focused approach towards achieving effective resolution of legal matters.",
-  },
-  {
-    num: "02",
-    title: "Strategic Case Handling",
-    text: "Careful analysis of the facts, documents and applicable law to develop an appropriate legal strategy.",
-  },
-  {
-    num: "03",
-    title: "Strong Legal Representation",
-    text: "Professional representation across relevant courts and legal proceedings.",
-  },
-  {
-    num: "04",
-    title: "Clear Legal Guidance",
-    text: "Clear communication and practical guidance throughout the legal process.",
-  },
-];
+import { UspSection } from "@/components/UspSection";
 
 const CHAPTERS = [
   {
@@ -71,7 +50,7 @@ const Home = () => {
     el.scrollBy({ left: dir * (el.clientWidth / perView), behavior: "smooth" });
   };
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const portraitY = useTransform(scrollYProgress, [0, 1], [0, 90]);
+  const sliderY = useTransform(scrollYProgress, [0, 1], [0, 90]);
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -162,19 +141,8 @@ const Home = () => {
               transition={{ duration: 1, delay: 0.4 }}
               className="relative mx-auto max-w-sm lg:max-w-none"
             >
-              <div className="absolute -left-4 -top-4 h-full w-full border border-gold/50" aria-hidden="true" />
-              <motion.div style={{ y: portraitY }} className="relative overflow-hidden bg-navy/5">
-                <img
-                  src={PORTRAIT_URL}
-                  alt="Aditya Gaur & Associates"
-                  data-testid="hero-portrait"
-                  className="aspect-[4/5] w-full object-cover object-top"
-                  loading="eager"
-                />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/80 to-transparent p-5">
-                  <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-gold">Chamber</p>
-                  <p className="mt-1 text-sm text-ivory">Opposite District &amp; Sessions Court, Faridabad</p>
-                </div>
+              <motion.div style={{ y: sliderY }} className="relative">
+                <HeroSlider />
               </motion.div>
             </motion.div>
           </div>
@@ -182,29 +150,7 @@ const Home = () => {
       </section>
 
       {/* USP — WHY ADITYA GAUR */}
-      <section data-testid="usp-section" className="border-b border-navy/10 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-          <Reveal>
-            <Overline>Why Aditya Gaur</Overline>
-            <GoldRule className="mt-3 w-16" />
-          </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-            {USPS.map((u, i) => (
-              <Reveal key={u.title} delay={i * 0.08}>
-                <div
-                  data-testid={`usp-${i + 1}`}
-                  className="border-l border-navy/10 pl-6 transition-colors duration-300 hover:border-gold"
-                >
-                  <span className="font-serif text-2xl italic text-gold/80">{u.num}</span>
-                  <span className="mt-3 block h-px w-8 bg-gold/70" />
-                  <h2 className="mt-4 font-serif text-xl text-navy">{u.title}</h2>
-                  <p className="mt-2.5 text-sm leading-relaxed text-charcoal/70">{u.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <UspSection />
 
       {/* JURISDICTION MARQUEE + QUICK CONTACT BAR — each with its own reserved space in normal flow */}
       <section data-testid="trust-strip" className="bg-navy">
