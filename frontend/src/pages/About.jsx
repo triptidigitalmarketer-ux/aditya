@@ -69,9 +69,6 @@ const About = () => (
                 </div>
               ))}
             </dl>
-            <p className="mt-4 text-xs italic text-charcoal/50">
-              Professional details are published here once verified.
-            </p>
           </Reveal>
 
           <Reveal delay={0.2}>
@@ -187,10 +184,7 @@ const About = () => (
                   </a>
                 </div>
                 <div className="flex flex-1 flex-col p-7">
-                  <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-gold-dark">
-                    Awaiting verified profile
-                  </span>
-                  <p className="mt-3 font-serif text-xl text-navy">Team Member {n}</p>
+                  <p className="font-serif text-xl text-navy">Team Member {n}</p>
                   <p className="mt-2 text-xs uppercase tracking-wider text-charcoal/50">
                     Designation — to be updated
                   </p>
